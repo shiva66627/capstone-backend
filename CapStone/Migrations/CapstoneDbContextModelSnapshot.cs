@@ -39,6 +39,7 @@ namespace CapStone.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<decimal>("ClaimAmount")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("ClaimNumber")
@@ -173,8 +174,11 @@ namespace CapStone.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("DateOfBirth")
+                        .HasColumnType("date");
+
+                    b.Property<int>("Gender")
+                        .HasColumnType("int");
 
                     b.Property<string>("NomineeName")
                         .IsRequired()
@@ -271,6 +275,7 @@ namespace CapStone.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("PremiumPaid")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("StartDate")
@@ -297,6 +302,7 @@ namespace CapStone.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlanId"));
 
                     b.Property<decimal>("CoverageAmount")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("CreatedDate")
@@ -314,6 +320,7 @@ namespace CapStone.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("PremiumAmount")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("PremiumType")
@@ -346,6 +353,7 @@ namespace CapStone.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PaymentId"));
 
                     b.Property<decimal>("Amount")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("CreatedDate")
@@ -393,6 +401,21 @@ namespace CapStone.Migrations
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
+
+                    b.Property<int>("EmailOtpAttempts")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("EmailOtpExpiry")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmailOtpHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("EmailOtpLastSentAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsEmailVerified")
+                        .HasColumnType("bit");
 
                     b.Property<string>("MobileNumber")
                         .IsRequired()

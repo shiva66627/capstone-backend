@@ -33,6 +33,39 @@ namespace CapStone.Controllers
 
             return Ok(result);
         }
+        [HttpPost("verify-otp")]
+        public async Task<IActionResult> VerifyOtp(
+         [FromBody] VerifyOtpRequestDTO request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var result = await _authService.VerifyOtpAsync(request);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+        // resend otp
+        [HttpPost("resend-otp")]
+        public async Task<IActionResult> ResendOtp(
+    [FromBody] ResendOtpRequestDTO request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = await _authService.ResendOtpAsync(request);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
 
         // POST: api/Auth/login
         [HttpPost("login")]
@@ -52,5 +85,16 @@ namespace CapStone.Controllers
 
             return Ok(result);
         }
+
+        //[HttpPost("admin-login")]
+        //public async Task<IActionResult> AdminLogin(LoginRequestDTO request)
+        //{
+        //    var result = await _authService.AdminLoginAsync(request);
+
+        //    if (!result.Success)
+        //        return Unauthorized(result);
+
+        //    return Ok(result);
+        //}
     }
 }

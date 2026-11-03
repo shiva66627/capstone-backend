@@ -29,6 +29,19 @@ namespace CapStone.Controllers
             return Ok(result);
         }
 
+        // GET: api/PremiumPayment/paged
+        [HttpGet("paged")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
+        public async Task<IActionResult> GetPagedPayments([FromQuery] PaymentFilterDTO filter)
+        {
+            var result = await _paymentService.GetPagedPaymentsAsync(filter);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
         // GET: api/PremiumPayment/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPaymentById(int id)
@@ -74,6 +87,18 @@ namespace CapStone.Controllers
                 return BadRequest(ModelState);
 
             var result = await _paymentService.MakePaymentAsync(request);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
+        // GET: api/PremiumPayment/next-due/5
+        [HttpGet("next-due/{policyId}")]
+        public async Task<IActionResult> GetNextPremiumPayment(int policyId)
+        {
+            var result = await _paymentService.GetNextPremiumPaymentDetailsAsync(policyId);
 
             if (!result.Success)
                 return BadRequest(result);

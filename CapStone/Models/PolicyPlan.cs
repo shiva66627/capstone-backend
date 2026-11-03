@@ -1,17 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace CapStone.Models
 {
     public enum PremiumType
     {
-        OneTime,
-        Annual
+        Monthly,
+        Quarterly,
+        HalfYearly,
+        Yearly
     }
 
     public enum PlanStatus
     {
-        Available,
-        NotAvailable
+        NotAvailable,
+        Available
     }
 
     public class PolicyPlan
@@ -22,8 +24,6 @@ namespace CapStone.Models
         [Required]
         [StringLength(100)]
         public string PlanName { get; set; } = string.Empty;
-
-       
 
         [Required]
         [Range(1, double.MaxValue)]

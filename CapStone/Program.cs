@@ -1,14 +1,16 @@
 using CapStone.Configuration;
 using CapStone.Data;
-
+using CapStone.Middleware;
 using CapStone.Repositories;
 using CapStone.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace CapStone
 {
@@ -19,6 +21,20 @@ namespace CapStone
             var builder = WebApplication.CreateBuilder(args);
 
             // =========================
+            // CORS
+            // =========================
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontends", policy =>
+                    policy.WithOrigins(
+                              "http://localhost:4200"    // Angular frontend
+                          )
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials());
+            });
+
+            // =========================
             // Database
             // =========================
             builder.Services.AddDbContext<CapstoneDbContext>(options =>
@@ -26,7 +42,7 @@ namespace CapStone
                     builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // =========================
-            // JWT Configuration
+            // JWT Authentication
             // =========================
             builder.Services.Configure<JwtSettings>(
                 builder.Configuration.GetSection("Jwt"));
@@ -35,29 +51,39 @@ namespace CapStone
                 .GetSection("Jwt")
                 .Get<JwtSettings>();
 
-            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
+            // DefaultInboundClaimTypeMap mapping preserved
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
 
-                        ValidIssuer = jwtSettings!.Issuer,
-                        ValidAudience = jwtSettings.Audience,
+                    ValidIssuer = jwtSettings!.Issuer,
+                    ValidAudience = jwtSettings.Audience,
 
-                        IssuerSigningKey = new SymmetricSecurityKey(
-                            Encoding.UTF8.GetBytes(jwtSettings.Key))
-                    };
-                });
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(jwtSettings.Key)),
+
+                    RoleClaimType = System.Security.Claims.ClaimTypes.Role,
+                    NameClaimType = System.Security.Claims.ClaimTypes.Name 
+                };
+            });
 
             builder.Services.AddAuthorization();
+           
 
             // =========================
-            // AutoMapper
+            // HTTP Context
             // =========================
+            builder.Services.AddHttpContextAccessor();
 
             // =========================
             // Repository Dependency Injection
@@ -85,6 +111,7 @@ namespace CapStone
             builder.Services.AddScoped<IClaimService, ClaimService>();
             builder.Services.AddScoped<IClaimDocumentService, ClaimDocumentService>();
             builder.Services.AddScoped<IClaimHistoryService, ClaimHistoryService>();
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
             // =========================
             // Controllers
@@ -104,13 +131,30 @@ namespace CapStone
                     Version = "v1"
                 });
 
+                options.CustomSchemaIds(type => type.FullName);
+
+                // Fix: Map DateOnly to proper 'date' format so Swagger UI renders it correctly
+                options.MapType<DateOnly>(() => new OpenApiSchema
+                {
+                    Type = "string",
+                    Format = "date",
+                    Example = new Microsoft.OpenApi.Any.OpenApiString(DateTime.UtcNow.ToString("yyyy-MM-dd"))
+                });
+
+                var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                if (File.Exists(xmlPath))
+                {
+                    options.IncludeXmlComments(xmlPath);
+                }
+
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
-                    Description = "Enter JWT Token",
+                    Description = "Enter your JWT token below. (Swagger will automatically add 'Bearer ' prefix).",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.Http,
-                    Scheme = "Bearer",
+                    Scheme = "bearer",
                     BearerFormat = "JWT"
                 });
 
@@ -135,13 +179,20 @@ namespace CapStone
             // =========================
             // Configure HTTP Pipeline
             // =========================
+            app.UseMiddleware<GlobalExceptionMiddleware>();
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "CapStone Insurance API v1");
+                });
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("AllowFrontends");
 
             app.UseAuthentication();
 

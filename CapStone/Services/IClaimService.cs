@@ -7,6 +7,8 @@ namespace CapStone.Services
     {
         Task<ApiResponseDTO<IEnumerable<ClaimResponseDTO>>> GetAllClaimsAsync();
 
+        Task<ApiResponseDTO<PaginatedResponseDTO<ClaimResponseDTO>>> GetPagedClaimsAsync(ClaimFilterDTO filter);
+
         Task<ApiResponseDTO<ClaimResponseDTO>> GetClaimByIdAsync(int id);
 
         Task<ApiResponseDTO<IEnumerable<ClaimResponseDTO>>> GetClaimsByCustomerAsync(int customerId);

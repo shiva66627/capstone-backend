@@ -1,14 +1,24 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace CapStone.Models
 {
+    public enum Gender
+    {
+        Male,
+        Female,
+        Other
+    }
+
     public class Customer
     {
         [Key]
         public int CustomerId { get; set; }
 
         [Required]
-        public DateTime DateOfBirth { get; set; }
+        public Gender Gender { get; set; }
+
+        [Required]
+        public DateOnly DateOfBirth { get; set; }
 
         [Required]
         [StringLength(100)]

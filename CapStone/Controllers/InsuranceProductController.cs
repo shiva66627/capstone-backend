@@ -17,10 +17,22 @@ namespace CapStone.Controllers
         }
 
         [HttpGet]
-        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff,Customer")]
         public async Task<IActionResult> GetAllProducts()
         {
             var result = await _productService.GetAllProductsAsync();
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
+        [HttpGet("paged")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
+        public async Task<IActionResult> GetPagedProducts([FromQuery] ProductFilterDTO filter)
+        {
+            var result = await _productService.GetPagedProductsAsync(filter);
 
             if (!result.Success)
                 return BadRequest(result);
@@ -85,6 +97,17 @@ namespace CapStone.Controllers
         public async Task<IActionResult> DeactivateProduct(int id)
         {
             var result = await _productService.DeactivateProductAsync(id);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+        [HttpPut("{id}/activate")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ActivateProduct(int id)
+        {
+            var result = await _productService.ActivateProductAsync(id);
 
             if (!result.Success)
                 return BadRequest(result);

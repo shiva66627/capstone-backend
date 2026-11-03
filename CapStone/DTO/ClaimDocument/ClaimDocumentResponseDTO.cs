@@ -1,4 +1,4 @@
-﻿using CapStone.Models;
+using CapStone.Models;
 
 namespace CapStone.DTO.ClaimDocument
 {
@@ -16,6 +16,8 @@ namespace CapStone.DTO.ClaimDocument
 
         public int ClaimId { get; set; }
 
-        public DateTime UploadedDate { get; set; }
+        public string CustomerName { get; set; } = string.Empty;
+
+       
     }
 }

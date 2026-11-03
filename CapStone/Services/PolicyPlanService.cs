@@ -1,7 +1,9 @@
 using CapStone.DTO.Common;
 using CapStone.DTO.PolicyPlan;
+using CapStone.Exceptions;
 using CapStone.Models;
 using CapStone.Repositories;
+using Microsoft.Extensions.Logging;
 
 namespace CapStone.Services
 {
@@ -9,13 +11,16 @@ namespace CapStone.Services
     {
         private readonly IPolicyPlanRepository _planRepository;
         private readonly IInsuranceProductRepository _productRepository;
+        private readonly ILogger<PolicyPlanService> _logger;
 
         public PolicyPlanService(
             IPolicyPlanRepository planRepository,
-            IInsuranceProductRepository productRepository)
+            IInsuranceProductRepository productRepository,
+            ILogger<PolicyPlanService> logger)
         {
             _planRepository = planRepository;
             _productRepository = productRepository;
+            _logger = logger;
         }
 
         public async Task<ApiResponseDTO<IEnumerable<PolicyPlanResponseDTO>>> GetAllPlansAsync()
@@ -28,11 +33,12 @@ namespace CapStone.Services
                 {
                     PlanId = p.PlanId,
                     PlanName = p.PlanName,
+                    ProductName = p.InsuranceProduct?.ProductName ?? string.Empty,
+                    ProductType = p.InsuranceProduct != null ? (int)p.InsuranceProduct.ProductType : 0,
                     CoverageAmount = p.CoverageAmount,
                     PremiumAmount = p.PremiumAmount,
                     PremiumType = p.PremiumType,
                     DurationYears = p.DurationYears,
-                    TermsConditions = p.TermsConditions,
                     PlanStatus = p.PlanStatus,
                     ProductId = p.ProductId,
                     CreatedDate = p.CreatedDate
@@ -47,7 +53,50 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<IEnumerable<PolicyPlanResponseDTO>>
+                {
+                    Success = false,
+                    Message = ex.Message
+                };
+            }
+        }
+
+        public async Task<ApiResponseDTO<PaginatedResponseDTO<PolicyPlanResponseDTO>>> GetPagedPlansAsync(PlanFilterDTO filter)
+        {
+            try
+            {
+                var (plans, totalRecords) = await _planRepository.GetFilteredPlansAsync(filter);
+
+                var result = plans.Select(p => new PolicyPlanResponseDTO
+                {
+                    PlanId = p.PlanId,
+                    PlanName = p.PlanName,
+                    ProductName = p.InsuranceProduct?.ProductName ?? string.Empty,
+                    ProductType = p.InsuranceProduct != null ? (int)p.InsuranceProduct.ProductType : 0,
+                    CoverageAmount = p.CoverageAmount,
+                    PremiumAmount = p.PremiumAmount,
+                    PremiumType = p.PremiumType,
+                    DurationYears = p.DurationYears,
+                    PlanStatus = p.PlanStatus,
+                    ProductId = p.ProductId,
+                    CreatedDate = p.CreatedDate
+                });
+
+                var paginatedData = new PaginatedResponseDTO<PolicyPlanResponseDTO>(
+                    result, totalRecords, filter.PageNumber, filter.PageSize, filter.SortField, filter.SortDirection);
+
+                return new ApiResponseDTO<PaginatedResponseDTO<PolicyPlanResponseDTO>>
+                {
+                    Success = true,
+                    Message = "Plans retrieved successfully.",
+                    Data = paginatedData
+                };
+            }
+            catch (Exception ex)
+            {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
+                return new ApiResponseDTO<PaginatedResponseDTO<PolicyPlanResponseDTO>>
                 {
                     Success = false,
                     Message = ex.Message
@@ -65,11 +114,12 @@ namespace CapStone.Services
                 {
                     PlanId = p.PlanId,
                     PlanName = p.PlanName,
+                    ProductName = p.InsuranceProduct?.ProductName ?? string.Empty,
+                    ProductType = p.InsuranceProduct != null ? (int)p.InsuranceProduct.ProductType : 0,
                     CoverageAmount = p.CoverageAmount,
                     PremiumAmount = p.PremiumAmount,
                     PremiumType = p.PremiumType,
                     DurationYears = p.DurationYears,
-                    TermsConditions = p.TermsConditions,
                     PlanStatus = p.PlanStatus,
                     ProductId = p.ProductId,
                     CreatedDate = p.CreatedDate
@@ -84,6 +134,7 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<IEnumerable<PolicyPlanResponseDTO>>
                 {
                     Success = false,
@@ -102,11 +153,12 @@ namespace CapStone.Services
                 {
                     PlanId = p.PlanId,
                     PlanName = p.PlanName,
+                    ProductName = p.InsuranceProduct?.ProductName ?? string.Empty,
+                    ProductType = p.InsuranceProduct != null ? (int)p.InsuranceProduct.ProductType : 0,
                     CoverageAmount = p.CoverageAmount,
                     PremiumAmount = p.PremiumAmount,
                     PremiumType = p.PremiumType,
                     DurationYears = p.DurationYears,
-                    TermsConditions = p.TermsConditions,
                     PlanStatus = p.PlanStatus,
                     ProductId = p.ProductId,
                     CreatedDate = p.CreatedDate
@@ -121,6 +173,7 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<IEnumerable<PolicyPlanResponseDTO>>
                 {
                     Success = false,
@@ -137,11 +190,7 @@ namespace CapStone.Services
 
                 if (plan == null)
                 {
-                    return new ApiResponseDTO<PolicyPlanResponseDTO>
-                    {
-                        Success = false,
-                        Message = "Plan not found."
-                    };
+                    throw new ResourceNotFoundException("Plan not found.");
                 }
 
                 return new ApiResponseDTO<PolicyPlanResponseDTO>
@@ -152,11 +201,12 @@ namespace CapStone.Services
                     {
                         PlanId = plan.PlanId,
                         PlanName = plan.PlanName,
+                        ProductName = plan.InsuranceProduct?.ProductName ?? string.Empty,
+                        ProductType = plan.InsuranceProduct != null ? (int)plan.InsuranceProduct.ProductType : 0,
                         CoverageAmount = plan.CoverageAmount,
                         PremiumAmount = plan.PremiumAmount,
                         PremiumType = plan.PremiumType,
                         DurationYears = plan.DurationYears,
-                        TermsConditions = plan.TermsConditions,
                         PlanStatus = plan.PlanStatus,
                         ProductId = plan.ProductId,
                         CreatedDate = plan.CreatedDate
@@ -165,6 +215,7 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<PolicyPlanResponseDTO>
                 {
                     Success = false,
@@ -181,40 +232,27 @@ namespace CapStone.Services
 
                 if (existing != null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Plan name already exists."
-                    };
+                    _logger.LogWarning("LOG-015: Business rule violation. Duplicate plan name creation attempted: {Name}", request.PlanName);
+                    throw new BusinessRuleViolationException("Plan name already exists.");
                 }
 
                 if (request.CoverageAmount <= request.PremiumAmount)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Coverage amount must be greater than premium amount."
-                    };
+                    _logger.LogWarning("LOG-015: Business rule violation. Coverage amount {Coverage} must be greater than premium amount {Premium}", request.CoverageAmount, request.PremiumAmount);
+                    throw new BusinessRuleViolationException("Coverage amount must be greater than premium amount.");
                 }
 
                 var product = await _productRepository.GetByIdAsync(request.ProductId);
 
                 if (product == null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Insurance product not found."
-                    };
+                    throw new ResourceNotFoundException("Insurance product not found.");
                 }
 
                 if (product.Status != ActiveStatus.Available)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Insurance product is not available."
-                    };
+                    _logger.LogWarning("LOG-015: Business rule violation. Attempted to create plan under inactive product: {ProductId}", request.ProductId);
+                    throw new BusinessRuleViolationException("Insurance product is not available.");
                 }
 
                 var plan = new PolicyPlan
@@ -224,7 +262,6 @@ namespace CapStone.Services
                     PremiumAmount = request.PremiumAmount,
                     PremiumType = request.PremiumType,
                     DurationYears = request.DurationYears,
-                    TermsConditions = request.TermsConditions.Trim(),
                     PlanStatus = request.PlanStatus,
                     ProductId = request.ProductId,
                     CreatedDate = DateTime.UtcNow,
@@ -234,6 +271,8 @@ namespace CapStone.Services
                 await _planRepository.AddAsync(plan);
                 await _planRepository.SaveChangesAsync();
 
+                _logger.LogInformation("LOG-005: Plan creation successful. Plan: {Name}, ProductId: {ProductId}", request.PlanName, request.ProductId);
+
                 return new ApiResponseDTO<string>
                 {
                     Success = true,
@@ -242,6 +281,8 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
+                _logger.LogError(ex, "LOG-016: Unexpected system error during Plan creation.");
                 var errorMessage = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
                 return new ApiResponseDTO<string>
                 {
@@ -259,51 +300,34 @@ namespace CapStone.Services
 
                 if (plan == null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Policy plan not found."
-                    };
+                    throw new ResourceNotFoundException("Policy plan not found.");
                 }
 
                 var existing = await _planRepository.GetByPlanNameAsync(request.PlanName.Trim());
 
                 if (existing != null && existing.PlanId != id)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Plan name already exists."
-                    };
+                    _logger.LogWarning("LOG-015: Business rule violation. Duplicate plan name update attempted: {Name}", request.PlanName);
+                    throw new BusinessRuleViolationException("Plan name already exists.");
                 }
 
                 if (request.CoverageAmount <= request.PremiumAmount)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Coverage amount must be greater than premium amount."
-                    };
+                    _logger.LogWarning("LOG-015: Business rule violation. Coverage amount {Coverage} must be greater than premium amount {Premium}", request.CoverageAmount, request.PremiumAmount);
+                    throw new BusinessRuleViolationException("Coverage amount must be greater than premium amount.");
                 }
 
                 var product = await _productRepository.GetByIdAsync(request.ProductId);
 
                 if (product == null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Insurance product not found."
-                    };
+                    throw new ResourceNotFoundException("Insurance product not found.");
                 }
 
                 if (product.Status != ActiveStatus.Available)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Insurance product is not available."
-                    };
+                    _logger.LogWarning("LOG-015: Business rule violation. Attempted to update plan under inactive product: {ProductId}", request.ProductId);
+                    throw new BusinessRuleViolationException("Insurance product is not available.");
                 }
 
                 plan.PlanName = request.PlanName.Trim();
@@ -311,13 +335,14 @@ namespace CapStone.Services
                 plan.PremiumAmount = request.PremiumAmount;
                 plan.PremiumType = request.PremiumType;
                 plan.DurationYears = request.DurationYears;
-                plan.TermsConditions = request.TermsConditions.Trim();
                 plan.PlanStatus = request.PlanStatus;
                 plan.ProductId = request.ProductId;
                 plan.UpdatedDate = DateTime.UtcNow;
 
                 await _planRepository.UpdateAsync(plan);
                 await _planRepository.SaveChangesAsync();
+
+                _logger.LogInformation("LOG-005: Plan update successful. PlanId: {PlanId}, Plan: {Name}", id, request.PlanName);
 
                 return new ApiResponseDTO<string>
                 {
@@ -327,6 +352,8 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
+                _logger.LogError(ex, "LOG-016: Unexpected system error during Plan update.");
                 return new ApiResponseDTO<string>
                 {
                     Success = false,
@@ -342,11 +369,7 @@ namespace CapStone.Services
 
                 if (plan == null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "Policy plan not found."
-                    };
+                    throw new ResourceNotFoundException("Policy plan not found.");
                 }
 
                 plan.PlanStatus = PlanStatus.NotAvailable;
@@ -363,6 +386,40 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
+                return new ApiResponseDTO<string>
+                {
+                    Success = false,
+                    Message = ex.Message
+                };
+            }
+        }
+        public async Task<ApiResponseDTO<string>> ActivatePlanAsync(int id)
+        {
+            try
+            {
+                var plan = await _planRepository.GetByIdAsync(id);
+
+                if (plan == null)
+                {
+                    throw new ResourceNotFoundException("Policy plan not found.");
+                }
+
+                plan.PlanStatus = PlanStatus.Available;
+                plan.UpdatedDate = DateTime.UtcNow;
+
+                await _planRepository.UpdateAsync(plan);
+                await _planRepository.SaveChangesAsync();
+
+                return new ApiResponseDTO<string>
+                {
+                    Success = true,
+                    Message = "Policy plan activated successfully."
+                };
+            }
+            catch (Exception ex)
+            {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<string>
                 {
                     Success = false,

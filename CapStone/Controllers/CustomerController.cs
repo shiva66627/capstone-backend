@@ -31,6 +31,21 @@ namespace CapStone.Controllers
             return Ok(result);
         }
 
+        // GET: api/Customer/paged
+        [HttpGet("paged")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
+        public async Task<IActionResult> GetPagedCustomers([FromQuery] CustomerFilterDTO filter)
+        {
+            var result = await _customerService.GetPagedCustomersAsync(filter);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
         // GET: api/Customer/5
         [HttpGet("{id}")]
         [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
@@ -46,10 +61,25 @@ namespace CapStone.Controllers
             return Ok(result);
         }
 
-        // POST: api/Customer
-        [HttpPost]
+        // GET: api/Customer/user/5
+        [HttpGet("user/{userId}")]
         [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Customer")]
-        public async Task<IActionResult> AddCustomer(CustomerRequestDTO request)
+        public async Task<IActionResult> GetCustomerByUserId(int userId)
+        {
+            var result = await _customerService.GetCustomerByUserIdAsync(userId);
+
+            if (!result.Success)
+            {
+                return NotFound(result);
+            }
+
+            return Ok(result);
+        }
+
+      //  POST: api/Customer
+       [HttpPost]
+       [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Customer")]
+        public async Task<IActionResult> AddCustomer([FromBody] CustomerRequestDTO request)
         {
             if (!ModelState.IsValid)
             {
@@ -66,10 +96,10 @@ namespace CapStone.Controllers
             return Ok(result);
         }
 
-        // PUT: api/Customer/5
+
         [HttpPut("{id}")]
         [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Customer")]
-        public async Task<IActionResult> UpdateCustomer(int id, CustomerRequestDTO request)
+        public async Task<IActionResult> UpdateCustomer(int id, [FromBody] CustomerRequestDTO request)
         {
             if (!ModelState.IsValid)
             {

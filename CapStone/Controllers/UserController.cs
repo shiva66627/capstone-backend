@@ -30,6 +30,20 @@ namespace CapStone.Controllers
             return Ok(result);
         }
 
+        // GET: api/User/paged
+        [HttpGet("paged")]
+        public async Task<IActionResult> GetPagedUsers([FromQuery] UserFilterDTO filter)
+        {
+            var result = await _userService.GetPagedUsersAsync(filter);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
         // GET: api/User/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(int id)

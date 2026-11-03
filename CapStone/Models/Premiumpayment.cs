@@ -4,8 +4,9 @@ namespace CapStone.Models
 {
     public enum PaymentStatus
     {
+          Failed,
         Success,
-        Failed,
+     
         Pending
     }
 

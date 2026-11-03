@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
+using CapStone.Attributes;
 
 namespace CapStone.DTO.Claim
 {
@@ -17,5 +18,8 @@ namespace CapStone.DTO.Claim
 
         [Required]
         public DateTime IncidentDate { get; set; }
+
+        // Added to match PDF SRS: "Supporting document details"
+        public List<string> SupportingDocuments { get; set; } = new List<string>();
     }
 }

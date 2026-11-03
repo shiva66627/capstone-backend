@@ -29,6 +29,19 @@ namespace CapStone.Controllers
             return Ok(result);
         }
 
+        // GET: api/Claim/paged
+        [HttpGet("paged")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
+        public async Task<IActionResult> GetPagedClaims([FromQuery] ClaimFilterDTO filter)
+        {
+            var result = await _claimService.GetPagedClaimsAsync(filter);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
         // GET: api/Claim/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetClaimById(int id)

@@ -1,5 +1,6 @@
 using CapStone.DTO.Common;
 using CapStone.DTO.User;
+using CapStone.Exceptions;
 using CapStone.Models;
 using CapStone.Repositories;
 
@@ -20,10 +21,10 @@ namespace CapStone.Services
             {
                 var users = await _userRepository.GetAllAsync();
 
-                var userDtos = users.Select(u => new UserResponseDTO
+                var result = users.Select(u => new UserResponseDTO
                 {
                     UserId = u.UserId,
-                    UserName = u.UserName,
+                    FullName = u.UserName,
                     Email = u.Email,
                     MobileNumber = u.MobileNumber,
                     Role = u.Role,
@@ -35,12 +36,51 @@ namespace CapStone.Services
                 {
                     Success = true,
                     Message = "Users retrieved successfully.",
-                    Data = userDtos
+                    Data = result
                 };
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<IEnumerable<UserResponseDTO>>
+                {
+                    Success = false,
+                    Message = ex.Message
+                };
+            }
+        }
+
+        public async Task<ApiResponseDTO<PaginatedResponseDTO<UserResponseDTO>>> GetPagedUsersAsync(UserFilterDTO filter)
+        {
+            try
+            {
+                var (users, totalRecords) = await _userRepository.GetFilteredUsersAsync(filter);
+
+                var userDtos = users.Select(u => new UserResponseDTO
+                {
+                    UserId = u.UserId,
+                    FullName = u.UserName,
+                    Email = u.Email,
+                    MobileNumber = u.MobileNumber,
+                    Role = u.Role,
+                    ActiveStatus = u.ActiveStatus,
+                    CreatedDate = u.CreatedDate
+                });
+
+                var paginatedData = new PaginatedResponseDTO<UserResponseDTO>(
+                    userDtos, totalRecords, filter.PageNumber, filter.PageSize, filter.SortField, filter.SortDirection);
+
+                return new ApiResponseDTO<PaginatedResponseDTO<UserResponseDTO>>
+                {
+                    Success = true,
+                    Message = "Users retrieved successfully.",
+                    Data = paginatedData
+                };
+            }
+            catch (Exception ex)
+            {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
+                return new ApiResponseDTO<PaginatedResponseDTO<UserResponseDTO>>
                 {
                     Success = false,
                     Message = ex.Message
@@ -56,17 +96,13 @@ namespace CapStone.Services
 
                 if (user == null)
                 {
-                    return new ApiResponseDTO<UserResponseDTO>
-                    {
-                        Success = false,
-                        Message = "User not found."
-                    };
+                    throw new ResourceNotFoundException("User not found.");
                 }
 
                 var dto = new UserResponseDTO
                 {
                     UserId = user.UserId,
-                    UserName = user.UserName,
+                    FullName = user.UserName,
                     Email = user.Email,
                     MobileNumber = user.MobileNumber,
                     Role = user.Role,
@@ -83,6 +119,7 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<UserResponseDTO>
                 {
                     Success = false,
@@ -99,11 +136,7 @@ namespace CapStone.Services
 
                 if (user == null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "User not found."
-                    };
+                    throw new ResourceNotFoundException("User not found.");
                 }
 
                 user.ActiveStatus = request.ActiveStatus;
@@ -120,6 +153,7 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<string>
                 {
                     Success = false,
@@ -136,11 +170,7 @@ namespace CapStone.Services
 
                 if (user == null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "User not found."
-                    };
+                    throw new ResourceNotFoundException("User not found.");
                 }
 
                 user.ActiveStatus = ActiveStatusEnum.InActive;
@@ -157,6 +187,7 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<string>
                 {
                     Success = false,
@@ -173,11 +204,7 @@ namespace CapStone.Services
 
                 if (user == null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "User not found."
-                    };
+                    throw new ResourceNotFoundException("User not found.");
                 }
 
                 await _userRepository.DeleteAsync(id);
@@ -191,6 +218,7 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<string>
                 {
                     Success = false,
@@ -207,11 +235,7 @@ namespace CapStone.Services
 
                 if (user == null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "User not found."
-                    };
+                    throw new ResourceNotFoundException("User not found.");
                 }
 
                 user.Role = Role.Staff;
@@ -228,6 +252,7 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<string>
                 {
                     Success = false,
@@ -244,20 +269,12 @@ namespace CapStone.Services
 
                 if (user == null)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "User not found."
-                    };
+                    throw new ResourceNotFoundException("User not found.");
                 }
 
                 if (user.Role == Role.Customer)
                 {
-                    return new ApiResponseDTO<string>
-                    {
-                        Success = false,
-                        Message = "User is already a Customer."
-                    };
+                    throw new BusinessRuleViolationException("User is already a Customer.");
                 }
 
                 user.Role = Role.Customer;
@@ -274,6 +291,7 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
+                if (ex.GetType().Namespace == "CapStone.Exceptions") throw;
                 return new ApiResponseDTO<string>
                 {
                     Success = false,

@@ -29,6 +29,19 @@ namespace CapStone.Controllers
             return Ok(result);
         }
 
+        // GET: api/Policy/paged
+        [HttpGet("paged")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
+        public async Task<IActionResult> GetPagedPolicies([FromQuery] PolicyFilterDTO filter)
+        {
+            var result = await _policyService.GetPagedPoliciesAsync(filter);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
         // GET: api/Policy/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPolicyById(int id)
@@ -91,6 +104,32 @@ namespace CapStone.Controllers
         public async Task<IActionResult> CancelPolicy(int id)
         {
             var result = await _policyService.CancelPolicyAsync(id);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
+        // PUT: api/Policy/5/approve
+        [HttpPut("{id}/approve")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
+        public async Task<IActionResult> ApprovePolicy(int id)
+        {
+            var result = await _policyService.ApprovePolicyAsync(id);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
+        // PUT: api/Policy/5/reject
+        [HttpPut("{id}/reject")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
+        public async Task<IActionResult> RejectPolicy(int id)
+        {
+            var result = await _policyService.RejectPolicyAsync(id);
 
             if (!result.Success)
                 return BadRequest(result);

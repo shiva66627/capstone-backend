@@ -14,17 +14,79 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.RegisterRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.RegisterRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.RegisterRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/verify-otp": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.VerifyOtpRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.VerifyOtpRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.VerifyOtpRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/resend-otp": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.ResendOtpRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.ResendOtpRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.ResendOtpRequestDTO"
               }
             }
           }
@@ -45,17 +107,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.LoginRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.LoginRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Authentication.LoginRequestDTO"
               }
             }
           }
@@ -71,6 +133,65 @@
       "get": {
         "tags": [
           "Claim"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Claim/paged": {
+      "get": {
+        "tags": [
+          "Claim"
+        ],
+        "parameters": [
+          {
+            "name": "ClaimStatus",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/CapStone.Models.ClaimStatus"
+            }
+          },
+          {
+            "name": "CustomerId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDirection",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -134,17 +255,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClaimRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Claim.ClaimRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClaimRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Claim.ClaimRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ClaimRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Claim.ClaimRequestDTO"
               }
             }
           }
@@ -165,17 +286,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClaimReviewDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Claim.ClaimReviewDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClaimReviewDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Claim.ClaimReviewDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ClaimReviewDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Claim.ClaimReviewDTO"
               }
             }
           }
@@ -196,17 +317,58 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClaimDecisionDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Claim.ClaimDecisionDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClaimDecisionDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Claim.ClaimDecisionDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ClaimDecisionDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Claim.ClaimDecisionDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ClaimDocument": {
+      "get": {
+        "tags": [
+          "ClaimDocument"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ClaimDocument"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapStone.DTO.ClaimDocument.ClaimDocumentRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapStone.DTO.ClaimDocument.ClaimDocumentRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapStone.DTO.ClaimDocument.ClaimDocumentRequestDTO"
               }
             }
           }
@@ -241,30 +403,11 @@
         }
       }
     },
-    "/api/ClaimDocument": {
-      "post": {
+    "/api/ClaimHistory": {
+      "get": {
         "tags": [
-          "ClaimDocument"
+          "ClaimHistory"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClaimDocumentRequestDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClaimDocumentRequestDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClaimDocumentRequestDTO"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -272,10 +415,64 @@
         }
       }
     },
-    "/api/ClaimHistory": {
+    "/api/ClaimHistory/paged": {
       "get": {
         "tags": [
           "ClaimHistory"
+        ],
+        "parameters": [
+          {
+            "name": "ClaimId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UpdatedBy",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Status",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/CapStone.Models.ClaimStatus"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDirection",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -326,21 +523,65 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Customer.CustomerRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Customer.CustomerRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Customer.CustomerRequestDTO"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Customer/paged": {
+      "get": {
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDirection",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -389,17 +630,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Customer.CustomerRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Customer.CustomerRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Customer.CustomerRequestDTO"
               }
             }
           }
@@ -417,6 +658,29 @@
         "parameters": [
           {
             "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Customer/user/{userId}": {
+      "get": {
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
             "in": "path",
             "required": true,
             "schema": {
@@ -451,21 +715,79 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/InsuranceProductRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.InsuranceProduct.InsuranceProductRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/InsuranceProductRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.InsuranceProduct.InsuranceProductRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/InsuranceProductRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.InsuranceProduct.InsuranceProductRequestDTO"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/InsuranceProduct/paged": {
+      "get": {
+        "tags": [
+          "InsuranceProduct"
+        ],
+        "parameters": [
+          {
+            "name": "ProductType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsActive",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDirection",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -526,17 +848,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/InsuranceProductRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.InsuranceProduct.InsuranceProductRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/InsuranceProductRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.InsuranceProduct.InsuranceProductRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/InsuranceProductRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.InsuranceProduct.InsuranceProductRequestDTO"
               }
             }
           }
@@ -571,10 +893,92 @@
         }
       }
     },
+    "/api/InsuranceProduct/{id}/activate": {
+      "put": {
+        "tags": [
+          "InsuranceProduct"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Policy": {
       "get": {
         "tags": [
           "Policy"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Policy/paged": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "PolicyStatus",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/CapStone.Models.PolicyStatus"
+            }
+          },
+          {
+            "name": "CustomerId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDirection",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -638,17 +1042,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PurchasePolicyRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Policy.PurchasePolicyRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PurchasePolicyRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Policy.PurchasePolicyRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PurchasePolicyRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Policy.PurchasePolicyRequestDTO"
               }
             }
           }
@@ -669,17 +1073,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/IssuePolicyRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Policy.IssuePolicyRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/IssuePolicyRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Policy.IssuePolicyRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/IssuePolicyRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.Policy.IssuePolicyRequestDTO"
               }
             }
           }
@@ -692,6 +1096,52 @@
       }
     },
     "/api/Policy/{id}/cancel": {
+      "put": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Policy/{id}/approve": {
+      "put": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Policy/{id}/reject": {
       "put": {
         "tags": [
           "Policy"
@@ -733,21 +1183,80 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PolicyPlanRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.PolicyPlan.PolicyPlanRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PolicyPlanRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.PolicyPlan.PolicyPlanRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PolicyPlanRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.PolicyPlan.PolicyPlanRequestDTO"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PolicyPlan/paged": {
+      "get": {
+        "tags": [
+          "PolicyPlan"
+        ],
+        "parameters": [
+          {
+            "name": "ProductId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "IsActive",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDirection",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -796,17 +1305,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PolicyPlanRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.PolicyPlan.PolicyPlanRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PolicyPlanRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.PolicyPlan.PolicyPlanRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PolicyPlanRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.PolicyPlan.PolicyPlanRequestDTO"
               }
             }
           }
@@ -876,6 +1385,29 @@
         }
       }
     },
+    "/api/PolicyPlan/{id}/activate": {
+      "put": {
+        "tags": [
+          "PolicyPlan"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/PremiumPayment": {
       "get": {
         "tags": [
@@ -895,21 +1427,80 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PremiumPaymentRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.PremiumPayment.PremiumPaymentRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PremiumPaymentRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.PremiumPayment.PremiumPaymentRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PremiumPaymentRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.PremiumPayment.PremiumPaymentRequestDTO"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PremiumPayment/paged": {
+      "get": {
+        "tags": [
+          "PremiumPayment"
+        ],
+        "parameters": [
+          {
+            "name": "PolicyId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PaymentStatus",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/CapStone.Models.PaymentStatus"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDirection",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -986,10 +1577,91 @@
         }
       }
     },
+    "/api/PremiumPayment/next-due/{policyId}": {
+      "get": {
+        "tags": [
+          "PremiumPayment"
+        ],
+        "parameters": [
+          {
+            "name": "policyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/User": {
       "get": {
         "tags": [
           "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/paged": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "Role",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsActive",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDirection",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -1062,17 +1734,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserStatusUpdateDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.User.UserStatusUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserStatusUpdateDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.User.UserStatusUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserStatusUpdateDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.User.UserStatusUpdateDTO"
               }
             }
           }
@@ -1116,17 +1788,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PromoteToStaffRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.User.PromoteToStaffRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PromoteToStaffRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.User.PromoteToStaffRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PromoteToStaffRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.User.PromoteToStaffRequestDTO"
               }
             }
           }
@@ -1147,17 +1819,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PromoteToStaffRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.User.PromoteToStaffRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PromoteToStaffRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.User.PromoteToStaffRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PromoteToStaffRequestDTO"
+                "$ref": "#/components/schemas/CapStone.DTO.User.PromoteToStaffRequestDTO"
               }
             }
           }
@@ -1168,66 +1840,103 @@
           }
         }
       }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
-      "ActiveStatus": {
-        "enum": [
-          0,
-          1
+      "CapStone.DTO.Authentication.LoginRequestDTO": {
+        "required": [
+          "email",
+          "password"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       },
-      "ActiveStatusEnum": {
-        "enum": [
-          0,
-          1
+      "CapStone.DTO.Authentication.RegisterRequestDTO": {
+        "required": [
+          "email",
+          "fullName",
+          "mobileNumber",
+          "password"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "description": "Full Name of the User",
+            "example": "John Doe"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Email Address of the User",
+            "format": "email",
+            "example": "johndoe@example.com"
+          },
+          "password": {
+            "minLength": 6,
+            "type": "string",
+            "description": "Password of the User",
+            "example": "Password123"
+          },
+          "mobileNumber": {
+            "minLength": 1,
+            "pattern": "^[6-9]\\d{9}$",
+            "type": "string",
+            "description": "10-digit mobile number starting with 6, 7, 8, or 9",
+            "example": "9876543210"
+          }
+        },
+        "additionalProperties": false
       },
-      "ClaimDecisionDTO": {
+      "CapStone.DTO.Authentication.ResendOtpRequestDTO": {
+        "required": [
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CapStone.DTO.Authentication.VerifyOtpRequestDTO": {
+        "required": [
+          "email",
+          "otp"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "otp": {
+            "minLength": 1,
+            "pattern": "^\\d{6}$",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CapStone.DTO.Claim.ClaimDecisionDTO": {
         "required": [
           "adminRemarks",
           "claimId",
@@ -1240,7 +1949,7 @@
             "format": "int32"
           },
           "claimStatus": {
-            "$ref": "#/components/schemas/ClaimStatus"
+            "$ref": "#/components/schemas/CapStone.Models.ClaimStatus"
           },
           "adminRemarks": {
             "maxLength": 500,
@@ -1250,42 +1959,7 @@
         },
         "additionalProperties": false
       },
-      "ClaimDocumentRequestDTO": {
-        "required": [
-          "claimId",
-          "documentName",
-          "documentReference",
-          "documentType",
-          "field"
-        ],
-        "type": "object",
-        "properties": {
-          "documentName": {
-            "maxLength": 200,
-            "minLength": 0,
-            "type": "string"
-          },
-          "documentType": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string"
-          },
-          "field": {
-            "maxLength": 500,
-            "minLength": 0,
-            "type": "string"
-          },
-          "documentReference": {
-            "$ref": "#/components/schemas/DocumentReference"
-          },
-          "claimId": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ClaimRequestDTO": {
+      "CapStone.DTO.Claim.ClaimRequestDTO": {
         "required": [
           "claimAmount",
           "claimReason",
@@ -1311,14 +1985,22 @@
           "incidentDate": {
             "type": "string",
             "format": "date-time"
+          },
+          "supportingDocuments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "ClaimReviewDTO": {
+      "CapStone.DTO.Claim.ClaimReviewDTO": {
         "required": [
           "agentRemarks",
-          "claimId"
+          "claimId",
+          "recommendedStatus"
         ],
         "type": "object",
         "properties": {
@@ -1330,24 +2012,55 @@
             "maxLength": 500,
             "minLength": 0,
             "type": "string"
+          },
+          "recommendedStatus": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
-      "ClaimStatus": {
-        "enum": [
-          0,
-          1,
-          2
+      "CapStone.DTO.ClaimDocument.ClaimDocumentRequestDTO": {
+        "required": [
+          "claimId",
+          "documentName",
+          "documentReference",
+          "documentType",
+          "field"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "object",
+        "properties": {
+          "documentName": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string"
+          },
+          "documentType": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "field": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string"
+          },
+          "documentReference": {
+            "$ref": "#/components/schemas/CapStone.Models.DocumentReference"
+          },
+          "claimId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       },
-      "CustomerRequestDTO": {
+      "CapStone.DTO.Customer.CustomerRequestDTO": {
         "required": [
           "address",
           "city",
           "dateOfBirth",
+          "gender",
           "nomineeName",
           "nomineeRelation",
           "pincode",
@@ -1356,9 +2069,13 @@
         ],
         "type": "object",
         "properties": {
+          "gender": {
+            "$ref": "#/components/schemas/CapStone.Models.Gender"
+          },
           "dateOfBirth": {
             "type": "string",
-            "format": "date-time"
+            "format": "date",
+            "example": "2026-11-03"
           },
           "city": {
             "maxLength": 100,
@@ -1382,7 +2099,7 @@
           },
           "nomineeName": {
             "maxLength": 100,
-            "minLength": 0,
+            "minLength": 10,
             "type": "string"
           },
           "nomineeRelation": {
@@ -1397,16 +2114,7 @@
         },
         "additionalProperties": false
       },
-      "DocumentReference": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "InsuranceProductRequestDTO": {
+      "CapStone.DTO.InsuranceProduct.InsuranceProductRequestDTO": {
         "required": [
           "description",
           "productName",
@@ -1417,11 +2125,11 @@
         "properties": {
           "productName": {
             "maxLength": 100,
-            "minLength": 0,
+            "minLength": 10,
             "type": "string"
           },
           "productType": {
-            "$ref": "#/components/schemas/ProductType"
+            "$ref": "#/components/schemas/CapStone.Models.ProductType"
           },
           "description": {
             "maxLength": 500,
@@ -1429,26 +2137,19 @@
             "type": "string"
           },
           "status": {
-            "$ref": "#/components/schemas/ActiveStatus"
+            "$ref": "#/components/schemas/CapStone.Models.ActiveStatus"
           }
         },
         "additionalProperties": false
       },
-      "IssuePolicyRequestDTO": {
+      "CapStone.DTO.Policy.IssuePolicyRequestDTO": {
         "required": [
           "customerId",
-          "endDate",
           "planId",
-          "policyNumber",
-          "premiumPaid",
           "startDate"
         ],
         "type": "object",
         "properties": {
-          "policyNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
           "customerId": {
             "type": "integer",
             "format": "int32"
@@ -1457,62 +2158,32 @@
             "type": "integer",
             "format": "int32"
           },
-          "premiumPaid": {
-            "type": "number",
-            "format": "double"
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CapStone.DTO.Policy.PurchasePolicyRequestDTO": {
+        "required": [
+          "planId",
+          "startDate"
+        ],
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "integer",
+            "format": "int32"
           },
           "startDate": {
             "type": "string",
             "format": "date-time"
-          },
-          "endDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "policyStatus": {
-            "$ref": "#/components/schemas/PolicyStatus"
           }
         },
         "additionalProperties": false
       },
-      "LoginRequestDTO": {
-        "required": [
-          "email",
-          "password"
-        ],
-        "type": "object",
-        "properties": {
-          "email": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "password": {
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "PaymentMode": {
-        "enum": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "PlanStatus": {
-        "enum": [
-          0,
-          1
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "PolicyPlanRequestDTO": {
+      "CapStone.DTO.PolicyPlan.PolicyPlanRequestDTO": {
         "required": [
           "coverageAmount",
           "durationYears",
@@ -1520,14 +2191,13 @@
           "planStatus",
           "premiumAmount",
           "premiumType",
-          "productId",
-          "termsConditions"
+          "productId"
         ],
         "type": "object",
         "properties": {
           "planName": {
             "maxLength": 100,
-            "minLength": 0,
+            "minLength": 10,
             "type": "string"
           },
           "coverageAmount": {
@@ -1541,7 +2211,7 @@
             "format": "double"
           },
           "premiumType": {
-            "$ref": "#/components/schemas/PremiumType"
+            "$ref": "#/components/schemas/CapStone.Models.PremiumType"
           },
           "durationYears": {
             "maximum": 100,
@@ -1549,13 +2219,8 @@
             "type": "integer",
             "format": "int32"
           },
-          "termsConditions": {
-            "maxLength": 2000,
-            "minLength": 0,
-            "type": "string"
-          },
           "planStatus": {
-            "$ref": "#/components/schemas/PlanStatus"
+            "$ref": "#/components/schemas/CapStone.Models.PlanStatus"
           },
           "productId": {
             "type": "integer",
@@ -1564,17 +2229,7 @@
         },
         "additionalProperties": false
       },
-      "PolicyStatus": {
-        "enum": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "PremiumPaymentRequestDTO": {
+      "CapStone.DTO.PremiumPayment.PremiumPaymentRequestDTO": {
         "required": [
           "amount",
           "paymentMode",
@@ -1589,7 +2244,7 @@
             "format": "double"
           },
           "paymentMode": {
-            "$ref": "#/components/schemas/PaymentMode"
+            "$ref": "#/components/schemas/CapStone.Models.PaymentMode"
           },
           "transactionReferenceNo": {
             "minLength": 1,
@@ -1602,25 +2257,7 @@
         },
         "additionalProperties": false
       },
-      "PremiumType": {
-        "enum": [
-          0,
-          1
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "ProductType": {
-        "enum": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "PromoteToStaffRequestDTO": {
+      "CapStone.DTO.User.PromoteToStaffRequestDTO": {
         "required": [
           "email"
         ],
@@ -1634,101 +2271,124 @@
         },
         "additionalProperties": false
       },
-      "PurchasePolicyRequestDTO": {
-        "required": [
-          "customerId",
-          "planId",
-          "startDate"
-        ],
-        "type": "object",
-        "properties": {
-          "customerId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "planId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "startDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "RegisterRequestDTO": {
-        "required": [
-          "email",
-          "mobileNumber",
-          "password",
-          "userName"
-        ],
-        "type": "object",
-        "properties": {
-          "userName": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string"
-          },
-          "email": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "password": {
-            "minLength": 6,
-            "type": "string"
-          },
-          "mobileNumber": {
-            "minLength": 1,
-            "pattern": "^[6-9]\\d{9}$",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UserStatusUpdateDTO": {
+      "CapStone.DTO.User.UserStatusUpdateDTO": {
         "required": [
           "activeStatus"
         ],
         "type": "object",
         "properties": {
           "activeStatus": {
-            "$ref": "#/components/schemas/ActiveStatusEnum"
+            "$ref": "#/components/schemas/CapStone.Models.ActiveStatusEnum"
           }
         },
         "additionalProperties": false
       },
-      "WeatherForecast": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+      "CapStone.Models.ActiveStatus": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.ActiveStatusEnum": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.ClaimStatus": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.DocumentReference": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.Gender": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.PaymentMode": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.PaymentStatus": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.PlanStatus": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.PolicyStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.PremiumType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CapStone.Models.ProductType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     },
     "securitySchemes": {
       "Bearer": {
         "type": "http",
-        "description": "Enter JWT Token",
-        "scheme": "Bearer",
+        "description": "Enter your JWT token below. (Swagger will automatically add 'Bearer ' prefix).",
+        "scheme": "bearer",
         "bearerFormat": "JWT"
       }
     }

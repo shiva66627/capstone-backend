@@ -12,8 +12,8 @@ namespace CapStone.Models
 
     public enum ActiveStatus
     {
-        Available,
-        NotAvailable
+     NotAvailable,
+        Available
     }
 
     public class InsuranceProduct

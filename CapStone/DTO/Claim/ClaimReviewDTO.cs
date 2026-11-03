@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace CapStone.DTO.Claim
 {
@@ -10,5 +10,9 @@ namespace CapStone.DTO.Claim
         [Required]
         [StringLength(500)]
         public string AgentRemarks { get; set; } = string.Empty;
+
+        // Added to match PDF SRS: "Recommended status"
+        [Required]
+        public string RecommendedStatus { get; set; } = string.Empty;
     }
 }

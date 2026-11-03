@@ -1,4 +1,4 @@
-﻿using CapStone.Models;
+using CapStone.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CapStone.Data
@@ -95,6 +95,28 @@ namespace CapStone.Data
                 .WithMany(u => u.ClaimHistories)
                 .HasForeignKey(ch => ch.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            // Decimal precision configuration
+
+            modelBuilder.Entity<Claim>()
+                .Property(c => c.ClaimAmount)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Policy>()
+                .Property(p => p.PremiumPaid)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<PolicyPlan>()
+                .Property(pp => pp.CoverageAmount)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<PolicyPlan>()
+                .Property(pp => pp.PremiumAmount)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<PremiumPayment>()
+                .Property(pp => pp.Amount)
+                .HasPrecision(18, 2);
         }
     }
 }

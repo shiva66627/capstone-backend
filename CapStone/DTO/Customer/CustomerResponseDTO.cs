@@ -1,10 +1,20 @@
-﻿namespace CapStone.DTO.Customer
+using CapStone.Models;
+
+namespace CapStone.DTO.Customer
 {
     public class CustomerResponseDTO
     {
         public int CustomerId { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public string FullName { get; set; } = string.Empty;
+
+        public string Email { get; set; } = string.Empty;
+
+        public string MobileNumber { get; set; } = string.Empty;
+
+        public Gender Gender { get; set; }
+
+        public DateOnly DateOfBirth { get; set; }
 
         public string City { get; set; } = string.Empty;
 

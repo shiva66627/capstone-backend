@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using CapStone.Models;
 
 namespace CapStone.DTO.InsuranceProduct
@@ -7,6 +7,7 @@ namespace CapStone.DTO.InsuranceProduct
     {
         [Required]
         [StringLength(100)]
+        [MinLength(10, ErrorMessage = "Product name must be at least 10 characters.")]
         public string ProductName { get; set; } = string.Empty;
 
         [Required]

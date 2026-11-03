@@ -11,8 +11,8 @@ namespace CapStone.Models
 
     public enum ActiveStatusEnum
     {
-        Active,
-        InActive
+        InActive,
+        Active
     }
 
     public class User
@@ -31,6 +31,14 @@ namespace CapStone.Models
 
         [Required]
         public string PasswordHash { get; set; } = string.Empty;
+        public bool IsEmailVerified { get; set; } = false;
+
+        public string? EmailOtpHash { get; set; }
+
+        public DateTime? EmailOtpExpiry { get; set; }
+        public DateTime? EmailOtpLastSentAt { get; set; }
+
+        public int EmailOtpAttempts { get; set; } = 0;
 
         [Required]
         [RegularExpression(@"^[6-9]\d{9}$",
@@ -42,7 +50,7 @@ namespace CapStone.Models
 
         [Required]
         public ActiveStatusEnum ActiveStatus { get; set; }
-
+        [Required]
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
 
         public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;

@@ -1,4 +1,4 @@
-﻿using CapStone.Models;
+using CapStone.Models;
 
 namespace CapStone.DTO.InsuranceProduct
 {
@@ -15,5 +15,6 @@ namespace CapStone.DTO.InsuranceProduct
         public ActiveStatus Status { get; set; }
 
         public DateTime CreatedDate { get; set; }
+
     }
 }

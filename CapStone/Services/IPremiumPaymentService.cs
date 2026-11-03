@@ -7,6 +7,8 @@ namespace CapStone.Services
     {
         Task<ApiResponseDTO<IEnumerable<PremiumPaymentResponseDTO>>> GetAllPaymentsAsync();
 
+        Task<ApiResponseDTO<PaginatedResponseDTO<PremiumPaymentResponseDTO>>> GetPagedPaymentsAsync(PaymentFilterDTO filter);
+
         Task<ApiResponseDTO<PremiumPaymentResponseDTO>> GetPaymentByIdAsync(int id);
 
         Task<ApiResponseDTO<IEnumerable<PremiumPaymentResponseDTO>>> GetPaymentsByPolicyAsync(int policyId);
@@ -14,5 +16,6 @@ namespace CapStone.Services
         Task<ApiResponseDTO<IEnumerable<PremiumPaymentResponseDTO>>> GetPaymentsByCustomerAsync(int customerId);
 
         Task<ApiResponseDTO<string>> MakePaymentAsync(PremiumPaymentRequestDTO request);
+        Task<ApiResponseDTO<NextPremiumPaymentDTO>> GetNextPremiumPaymentDetailsAsync(int policyId);
     }
 }

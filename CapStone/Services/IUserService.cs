@@ -7,6 +7,8 @@ namespace CapStone.Services
     {
         Task<ApiResponseDTO<IEnumerable<UserResponseDTO>>> GetAllUsersAsync();
 
+        Task<ApiResponseDTO<PaginatedResponseDTO<UserResponseDTO>>> GetPagedUsersAsync(UserFilterDTO filter);
+
         Task<ApiResponseDTO<UserResponseDTO>> GetUserByIdAsync(int id);
 
         Task<ApiResponseDTO<string>> UpdateUserStatusAsync(int id, UserStatusUpdateDTO request);

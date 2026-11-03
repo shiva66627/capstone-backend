@@ -1,4 +1,4 @@
-﻿using CapStone.DTO.Common;
+using CapStone.DTO.Common;
 using CapStone.DTO.InsuranceProduct;
 
 namespace CapStone.Services
@@ -6,6 +6,8 @@ namespace CapStone.Services
     public interface IInsuranceProductService
     {
         Task<ApiResponseDTO<IEnumerable<InsuranceProductResponseDTO>>> GetAllProductsAsync();
+
+        Task<ApiResponseDTO<PaginatedResponseDTO<InsuranceProductResponseDTO>>> GetPagedProductsAsync(ProductFilterDTO filter);
 
         Task<ApiResponseDTO<IEnumerable<InsuranceProductResponseDTO>>> GetAvailableProductsAsync();
 
@@ -16,5 +18,7 @@ namespace CapStone.Services
         Task<ApiResponseDTO<string>> UpdateProductAsync(int id, InsuranceProductRequestDTO request);
 
         Task<ApiResponseDTO<string>> DeactivateProductAsync(int id);
+
+        Task<ApiResponseDTO<string>> ActivateProductAsync(int id);
     }
 }

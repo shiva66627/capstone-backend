@@ -1,4 +1,4 @@
-﻿namespace CapStone.DTO.Common
+namespace CapStone.DTO.Common
 {
     public class ApiResponseDTO<T>
     {
@@ -7,5 +7,7 @@
         public string Message { get; set; } = string.Empty;
 
         public T? Data { get; set; }
+
+        public DateTime Timestamp { get; set; } = DateTime.UtcNow;
     }
 }

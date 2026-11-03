@@ -16,6 +16,18 @@ namespace CapStone.Controllers
             _documentService = documentService;
         }
 
+        // GET: api/ClaimDocument
+        [HttpGet]
+        public async Task<IActionResult> GetAllDocuments()
+        {
+            var result = await _documentService.GetAllDocumentsAsync();
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
         // GET: api/ClaimDocument/5
         [HttpGet("{claimId}")]
         public async Task<IActionResult> GetDocumentsByClaim(int claimId)

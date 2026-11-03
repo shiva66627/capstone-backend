@@ -1,3 +1,4 @@
+using CapStone.DTO.ClaimHistory;
 using CapStone.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,19 @@ namespace CapStone.Controllers
         public async Task<IActionResult> GetAllHistory()
         {
             var result = await _historyService.GetAllHistoryAsync();
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
+        // GET: api/ClaimHistory/paged
+        [HttpGet("paged")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin,Staff")]
+        public async Task<IActionResult> GetPagedHistory([FromQuery] ClaimHistoryFilterDTO filter)
+        {
+            var result = await _historyService.GetPagedHistoryAsync(filter);
 
             if (!result.Success)
                 return BadRequest(result);

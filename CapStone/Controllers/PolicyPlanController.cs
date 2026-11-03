@@ -18,10 +18,21 @@ namespace CapStone.Controllers
 
         // GET: api/PolicyPlan
         [HttpGet]
-    
         public async Task<IActionResult> GetAllPlans()
         {
             var result = await _planService.GetAllPlansAsync();
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
+        // GET: api/PolicyPlan/paged
+        [HttpGet("paged")]
+        public async Task<IActionResult> GetPagedPlans([FromQuery] PlanFilterDTO filter)
+        {
+            var result = await _planService.GetPagedPlansAsync(filter);
 
             if (!result.Success)
                 return BadRequest(result);
@@ -103,6 +114,18 @@ namespace CapStone.Controllers
         public async Task<IActionResult> DeactivatePlan(int id)
         {
             var result = await _planService.DeactivatePlanAsync(id);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+        // PUT: api/PolicyPlan/5/activate
+        [HttpPut("{id}/activate")]
+        [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ActivatePlan(int id)
+        {
+            var result = await _planService.ActivatePlanAsync(id);
 
             if (!result.Success)
                 return BadRequest(result);

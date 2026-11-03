@@ -8,5 +8,10 @@ namespace CapStone.Services
         Task<ApiResponseDTO<string>> RegisterAsync(RegisterRequestDTO request);
 
         Task<ApiResponseDTO<LoginResponseDTO>> LoginAsync(LoginRequestDTO request);
+        Task<ApiResponseDTO<string>> VerifyOtpAsync(
+          VerifyOtpRequestDTO request);
+        Task<ApiResponseDTO<string>> ResendOtpAsync(
+    ResendOtpRequestDTO request);
+        //Task<ApiResponseDTO<LoginResponseDTO>>AdminLoginAsync(LoginRequestDTO request);
     }
 }

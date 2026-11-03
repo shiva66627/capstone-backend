@@ -1,4 +1,4 @@
-﻿using CapStone.DTO.Common;
+using CapStone.DTO.Common;
 using CapStone.DTO.PolicyPlan;
 
 namespace CapStone.Services
@@ -6,6 +6,8 @@ namespace CapStone.Services
     public interface IPolicyPlanService
     {
         Task<ApiResponseDTO<IEnumerable<PolicyPlanResponseDTO>>> GetAllPlansAsync();
+
+        Task<ApiResponseDTO<PaginatedResponseDTO<PolicyPlanResponseDTO>>> GetPagedPlansAsync(PlanFilterDTO filter);
 
         Task<ApiResponseDTO<IEnumerable<PolicyPlanResponseDTO>>> GetAvailablePlansAsync();
 
@@ -18,5 +20,7 @@ namespace CapStone.Services
         Task<ApiResponseDTO<string>> UpdatePlanAsync(int id, PolicyPlanRequestDTO request);
 
         Task<ApiResponseDTO<string>> DeactivatePlanAsync(int id);
+
+        Task<ApiResponseDTO<string>> ActivatePlanAsync(int id);
     }
 }

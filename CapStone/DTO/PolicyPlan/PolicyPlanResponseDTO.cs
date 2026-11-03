@@ -1,4 +1,4 @@
-﻿using CapStone.Models;
+using CapStone.Models;
 
 namespace CapStone.DTO.PolicyPlan
 {
@@ -8,6 +8,12 @@ namespace CapStone.DTO.PolicyPlan
 
         public string PlanName { get; set; } = string.Empty;
 
+        public string ProductName { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Numeric product type: 0=Health, 1=Motor, 2=Life, 3=Travel
+        /// </summary>
+        public int ProductType { get; set; }
 
         public decimal CoverageAmount { get; set; }
 
@@ -17,7 +23,6 @@ namespace CapStone.DTO.PolicyPlan
 
         public int DurationYears { get; set; }
 
-        public string TermsConditions { get; set; } = string.Empty;
 
         public PlanStatus PlanStatus { get; set; }
 

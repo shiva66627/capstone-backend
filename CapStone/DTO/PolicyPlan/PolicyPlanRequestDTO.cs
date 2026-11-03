@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using CapStone.Models;
 
 namespace CapStone.DTO.PolicyPlan
@@ -7,6 +7,7 @@ namespace CapStone.DTO.PolicyPlan
     {
         [Required]
         [StringLength(100)]
+        [MinLength(10, ErrorMessage = "Plan name must be at least 10 characters.")]
         public string PlanName { get; set; } = string.Empty;
 
        
@@ -26,9 +27,6 @@ namespace CapStone.DTO.PolicyPlan
         [Range(1, 100)]
         public int DurationYears { get; set; }
 
-        [Required]
-        [StringLength(2000)]
-        public string TermsConditions { get; set; } = string.Empty;
 
         [Required]
         public PlanStatus PlanStatus { get; set; }

@@ -1,4 +1,4 @@
-﻿using CapStone.Models;
+using CapStone.Models;
 
 namespace CapStone.DTO.PremiumPayment
 {
@@ -16,6 +16,10 @@ namespace CapStone.DTO.PremiumPayment
 
         public DateTime PaymentDate { get; set; }
 
+        public string PolicyNumber { get; set; } = string.Empty;
         public int PolicyId { get; set; }
+        public int CustomerId { get; set; }
+        public string CustomerName { get; set; } = string.Empty;
+        public DateTime? NextPremiumDueDate { get; set; }
     }
 }
