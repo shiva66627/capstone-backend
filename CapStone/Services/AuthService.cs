@@ -460,5 +460,154 @@ namespace CapStone.Services
                 };
             }
         }
+
+        public async Task<ApiResponseDTO<string>> ForgotPasswordAsync(ForgotPasswordRequestDTO request)
+        {
+            try
+            {
+                var user = await _userRepository.GetByEmailAsync(request.Email.Trim().ToLower());
+                if (user == null)
+                {
+                    return new ApiResponseDTO<string>
+                    {
+                        Success = false,
+                        Message = "No account found registered with this email address."
+                    };
+                }
+
+                if (user.ActiveStatus != ActiveStatusEnum.Active)
+                {
+                    return new ApiResponseDTO<string>
+                    {
+                        Success = false,
+                        Message = "Account is inactive or blocked. Please contact SafeInsure support."
+                    };
+                }
+
+                if (user.EmailOtpLastSentAt.HasValue && DateTime.UtcNow < user.EmailOtpLastSentAt.Value.AddSeconds(60))
+                {
+                    return new ApiResponseDTO<string>
+                    {
+                        Success = false,
+                        Message = "Please wait 60 seconds before requesting another password reset code."
+                    };
+                }
+
+                var otp = RandomNumberGenerator.GetInt32(100000, 1000000).ToString();
+                user.EmailOtpHash = BCrypt.Net.BCrypt.HashPassword(otp);
+                user.EmailOtpExpiry = DateTime.UtcNow.AddMinutes(10);
+                user.EmailOtpAttempts = 0;
+                user.EmailOtpLastSentAt = DateTime.UtcNow;
+                user.UpdatedDate = DateTime.UtcNow;
+
+                await _userRepository.SaveChangesAsync();
+
+                try
+                {
+                    await _emailService.SendOtpEmailAsync(user.Email, otp);
+                }
+                catch (Exception emailEx)
+                {
+                    _logger.LogError(emailEx, "Failed to send reset email to {Email}", user.Email);
+                }
+
+                return new ApiResponseDTO<string>
+                {
+                    Success = true,
+                    Message = "A 6-digit password reset code has been sent to your email.",
+                    Data = user.Email
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "ForgotPassword failed for {Email}", request.Email);
+                return new ApiResponseDTO<string>
+                {
+                    Success = false,
+                    Message = "Unable to process password reset request. Please try again."
+                };
+            }
+        }
+
+        public async Task<ApiResponseDTO<string>> ResetPasswordAsync(ResetPasswordRequestDTO request)
+        {
+            try
+            {
+                var user = await _userRepository.GetByEmailAsync(request.Email.Trim().ToLower());
+                if (user == null)
+                {
+                    return new ApiResponseDTO<string>
+                    {
+                        Success = false,
+                        Message = "No account found with this email."
+                    };
+                }
+
+                if (string.IsNullOrEmpty(user.EmailOtpHash) || !user.EmailOtpExpiry.HasValue)
+                {
+                    return new ApiResponseDTO<string>
+                    {
+                        Success = false,
+                        Message = "No active password reset request found. Please request a new code."
+                    };
+                }
+
+                if (user.EmailOtpExpiry.Value <= DateTime.UtcNow)
+                {
+                    return new ApiResponseDTO<string>
+                    {
+                        Success = false,
+                        Message = "The verification code has expired. Please request a new code."
+                    };
+                }
+
+                if (user.EmailOtpAttempts >= 5)
+                {
+                    return new ApiResponseDTO<string>
+                    {
+                        Success = false,
+                        Message = "Maximum verification attempts exceeded. Please request a new code."
+                    };
+                }
+
+                user.EmailOtpAttempts++;
+
+                if (!BCrypt.Net.BCrypt.Verify(request.Otp, user.EmailOtpHash))
+                {
+                    await _userRepository.SaveChangesAsync();
+                    return new ApiResponseDTO<string>
+                    {
+                        Success = false,
+                        Message = "Invalid 6-digit verification code."
+                    };
+                }
+
+                user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.NewPassword);
+                user.IsEmailVerified = true;
+                user.EmailOtpHash = null;
+                user.EmailOtpExpiry = null;
+                user.EmailOtpAttempts = 0;
+                user.UpdatedDate = DateTime.UtcNow;
+
+                await _userRepository.SaveChangesAsync();
+
+                _logger.LogInformation("Password reset successfully for user {UserId}", user.UserId);
+
+                return new ApiResponseDTO<string>
+                {
+                    Success = true,
+                    Message = "Password has been reset successfully! You can now sign in with your new password."
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "ResetPassword failed for {Email}", request.Email);
+                return new ApiResponseDTO<string>
+                {
+                    Success = false,
+                    Message = "Unable to reset password. Please try again."
+                };
+            }
+        }
     }
 }

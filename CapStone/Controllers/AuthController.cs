@@ -1,4 +1,4 @@
-﻿using CapStone.DTO.Authentication;
+using CapStone.DTO.Authentication;
 using CapStone.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -96,5 +96,43 @@ namespace CapStone.Controllers
 
         //    return Ok(result);
         //}
+
+        // POST: api/Auth/forgot-password
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequestDTO request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = await _authService.ForgotPasswordAsync(request);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
+        // POST: api/Auth/reset-password
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequestDTO request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = await _authService.ResetPasswordAsync(request);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
     }
 }
