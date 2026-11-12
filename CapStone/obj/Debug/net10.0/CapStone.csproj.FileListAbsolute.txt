@@ -141,11 +141,6 @@ C:\Users\shiva\source\repos\CapStone\CapStone\bin\Debug\net10.0\runtimes\win-arm
 C:\Users\shiva\source\repos\CapStone\CapStone\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\shiva\source\repos\CapStone\CapStone\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\CapStone.csproj.AssemblyReference.cache
-C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\dotnet-watch\Microsoft.NET.Sdk.BlazorWeb.DotNetWatch.lib.module.js
-C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\dotnet-watch\Microsoft.NET.Sdk.BlazorWeb.DotNetWatch.BrowserTools.js
-C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\dotnet-watch\Microsoft.NET.Sdk.BlazorWeb.DotNetWatch.BrowserTools.Config.js
-C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\dotnet-watch\browser-tools-key.public.json
-C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\dotnet-watch\browser-tools-key.private.json
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\rpswa.dswa.cache.json
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\CapStone.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\CapStone.AssemblyInfoInputs.cache
@@ -160,9 +155,6 @@ C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\rjsmcshtml.dswa.
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\jsmodules\jsmodules.build.manifest.json
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\scopedcss\scopedcss.cache
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\scopedcss\bundle\CapStone.styles.css
-C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\compressed\ro1u8q4nl4-{0}-s9y91u5nkn-s9y91u5nkn.gz
-C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\compressed\oqai3px6af-{0}-lvkpp2i49p-lvkpp2i49p.gz
-C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\compressed\c0h7akk2kz-{0}-scyj3pnqhf-scyj3pnqhf.gz
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\staticwebassets.development.json
@@ -179,4 +171,12 @@ C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\staticwebassets.
 C:\Users\shiva\source\repos\CapStone\CapStone\bin\Debug\net10.0\BouncyCastle.Cryptography.dll
 C:\Users\shiva\source\repos\CapStone\CapStone\bin\Debug\net10.0\MailKit.dll
 C:\Users\shiva\source\repos\CapStone\CapStone\bin\Debug\net10.0\MimeKit.dll
-C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\compressed\uzupc9wo9t-{0}-4f2xdrgxma-4f2xdrgxma.gz
+C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.lib.module.js
+C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.js
+C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.Config.js
+C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\HotReload\browser-tools-key.public.json
+C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\HotReload\browser-tools-key.private.json
+C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\compressed\46be9wwuyg-{0}-tchfgznwy8-tchfgznwy8.gz
+C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\compressed\a99sb3kqbt-{0}-635apx0un6-635apx0un6.gz
+C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\compressed\hr2sa0q9c8-{0}-v1vy2to33n-v1vy2to33n.gz
+C:\Users\shiva\source\repos\CapStone\CapStone\obj\Debug\net10.0\compressed\c0h7akk2kz-{0}-ysew0n4kjn-ysew0n4kjn.gz

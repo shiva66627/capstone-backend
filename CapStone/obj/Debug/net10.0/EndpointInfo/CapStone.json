@@ -2176,7 +2176,7 @@
           "dateOfBirth": {
             "type": "string",
             "format": "date",
-            "example": "2026-11-04"
+            "example": "2026-11-12"
           },
           "city": {
             "maxLength": 100,

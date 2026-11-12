@@ -40,6 +40,7 @@ namespace CapStone.Repositories
                 .FirstOrDefaultAsync(p => p.PaymentId == id);
         }
 
+
         public async Task<IEnumerable<PremiumPayment>> FindAsync(Expression<Func<PremiumPayment, bool>> predicate)
         {
             return await _context.PremiumPayments.Where(predicate).ToListAsync();

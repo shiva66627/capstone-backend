@@ -3,8 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\shiva\\source\\repos\\CapStone\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\repostories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\repostories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\repostories\\premiumpaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\repostories\\premiumpaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\repostories\\policyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\repostories\\policyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\claimhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\claimhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\policyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\policyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\premiumpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\premiumpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\insuranceproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\insuranceproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\policyplanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\premiumpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\premiumpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\dto\\claim\\claimresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\dto\\claim\\claimresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\claimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,24 +111,12 @@
       "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\insuranceproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\insuranceproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\dto\\insuranceproduct\\insuranceproductresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\dto\\insuranceproduct\\insuranceproductresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\claimhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\claimhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\claimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\services\\claimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\dto\\claimhistory\\claimhistoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,14 +129,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\dto\\authentication\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\dto\\authentication\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -139,14 +159,6 @@
       "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\dto\\customer\\customerfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\repostories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\repostories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|c:\\users\\shiva\\source\\repos\\capstone\\capstone\\migrations\\20261027172251_addemailotplastsentat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C67EFD4-41BB-0D0D-964B-556E5CA708E6}|CapStone\\CapStone.csproj|solutionrelative:capstone\\migrations\\20261027172251_addemailotplastsentat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -162,7 +174,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -170,31 +182,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\User.cs",
-              "RelativeDocumentMoniker": "CapStone\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\User.cs",
-              "RelativeToolTip": "CapStone\\Models\\User.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA3wCYAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "PremiumPaymentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Repostories\\PremiumPaymentRepository.cs",
+              "RelativeDocumentMoniker": "CapStone\\Repostories\\PremiumPaymentRepository.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Repostories\\PremiumPaymentRepository.cs",
+              "RelativeToolTip": "CapStone\\Repostories\\PremiumPaymentRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:21:20.926Z"
+              "WhenOpened": "2026-11-12T09:40:22.604Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ClaimHistory.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\ClaimHistory.cs",
-              "RelativeDocumentMoniker": "CapStone\\Models\\ClaimHistory.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\ClaimHistory.cs",
-              "RelativeToolTip": "CapStone\\Models\\ClaimHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T03:32:11.384Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "CapStone\\Controllers\\CustomerController.cs",
@@ -202,120 +203,51 @@
               "RelativeToolTip": "CapStone\\Controllers\\CustomerController.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAYwAcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T10:59:05.586Z"
+              "WhenOpened": "2026-10-26T10:59:05.586Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PolicyService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PolicyService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\PolicyService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PolicyService.cs",
-              "RelativeToolTip": "CapStone\\Services\\PolicyService.cs",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAhwLYAAAARAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "CapStone\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Controllers\\UserController.cs",
+              "RelativeToolTip": "CapStone\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAADwv3YAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T18:38:29.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T15:12:05.277Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\AuthService.cs",
-              "RelativeToolTip": "CapStone\\Services\\AuthService.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAAC8AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:20:14.205Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "PremiumPaymentService.cs",
               "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PremiumPaymentService.cs",
               "RelativeDocumentMoniker": "CapStone\\Services\\PremiumPaymentService.cs",
               "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PremiumPaymentService.cs",
               "RelativeToolTip": "CapStone\\Services\\PremiumPaymentService.cs",
-              "ViewState": "AgIAACQBAAAAAAAAAAAlwC4BAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAALAAAAAAAAAAAAAuwMUBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T12:39:04.887Z"
+              "WhenOpened": "2026-10-27T12:39:04.887Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\CustomerService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\CustomerService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\CustomerService.cs",
-              "RelativeToolTip": "CapStone\\Services\\CustomerService.cs",
-              "ViewState": "AgIAAAgBAAAAAAAAAAAlwMYAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "PolicyService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PolicyService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\PolicyService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PolicyService.cs",
+              "RelativeToolTip": "CapStone\\Services\\PolicyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T10:22:18.081Z"
+              "WhenOpened": "2026-10-27T18:38:29.234Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "CapStone\\Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\Customer.cs",
-              "RelativeToolTip": "CapStone\\Models\\Customer.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:10:11.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PolicyPlanService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PolicyPlanService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\PolicyPlanService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PolicyPlanService.cs",
-              "RelativeToolTip": "CapStone\\Services\\PolicyPlanService.cs",
-              "ViewState": "AgIAAA4BAAAAAAAAAAAmwBcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T06:26:13.535Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\IEmailService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\IEmailService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\IEmailService.cs",
-              "RelativeToolTip": "CapStone\\Services\\IEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T14:02:51.826Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\EmailService.cs",
-              "RelativeToolTip": "CapStone\\Services\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T14:03:27.969Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\appsettings.json",
-              "RelativeDocumentMoniker": "CapStone\\appsettings.json",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\appsettings.json",
-              "RelativeToolTip": "CapStone\\appsettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-10-26T09:01:22.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 5,
               "Title": "ClaimHistoryService.cs",
               "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\ClaimHistoryService.cs",
               "RelativeDocumentMoniker": "CapStone\\Services\\ClaimHistoryService.cs",
@@ -323,203 +255,52 @@
               "RelativeToolTip": "CapStone\\Services\\ClaimHistoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T03:31:35.103Z"
+              "WhenOpened": "2026-10-28T03:31:35.103Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PolicyPlanRequestDTO.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\PolicyPlan\\PolicyPlanRequestDTO.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\PolicyPlan\\PolicyPlanRequestDTO.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\PolicyPlan\\PolicyPlanRequestDTO.cs",
-              "RelativeToolTip": "CapStone\\DTO\\PolicyPlan\\PolicyPlanRequestDTO.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA3wBwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Repostories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "CapStone\\Repostories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Repostories\\UserRepository.cs",
+              "RelativeToolTip": "CapStone\\Repostories\\UserRepository.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAIwEcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T07:43:38.518Z"
+              "WhenOpened": "2026-10-22T15:20:38.01Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PolicyPlanResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\PolicyPlan\\PolicyPlanResponseDTO.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\PolicyPlan\\PolicyPlanResponseDTO.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\PolicyPlan\\PolicyPlanResponseDTO.cs",
-              "RelativeToolTip": "CapStone\\DTO\\PolicyPlan\\PolicyPlanResponseDTO.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAkwBkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\UserService.cs",
+              "RelativeToolTip": "CapStone\\Services\\UserService.cs",
+              "ViewState": "AgIAAOIAAAAAAAAAAADwv+cAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T07:42:12.034Z"
+              "WhenOpened": "2026-11-05T08:49:40.752Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PolicyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Repostories\\PolicyRepository.cs",
+              "RelativeDocumentMoniker": "CapStone\\Repostories\\PolicyRepository.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Repostories\\PolicyRepository.cs",
+              "RelativeToolTip": "CapStone\\Repostories\\PolicyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-12T10:03:48.72Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ClaimResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Claim\\ClaimResponseDTO.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\Claim\\ClaimResponseDTO.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Claim\\ClaimResponseDTO.cs",
-              "RelativeToolTip": "CapStone\\DTO\\Claim\\ClaimResponseDTO.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAowCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T18:09:50.419Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ClaimService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\ClaimService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\ClaimService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\ClaimService.cs",
-              "RelativeToolTip": "CapStone\\Services\\ClaimService.cs",
-              "ViewState": "AgIAADYBAAAAAAAAAAAlwD8BAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T11:44:21.13Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ClaimDocumentResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\ClaimDocument\\ClaimDocumentResponseDTO.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\ClaimDocument\\ClaimDocumentResponseDTO.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\ClaimDocument\\ClaimDocumentResponseDTO.cs",
-              "RelativeToolTip": "CapStone\\DTO\\ClaimDocument\\ClaimDocumentResponseDTO.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T03:30:03.011Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "VerifyOtpRequestDTO.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\VerifyOtpRequestDTO.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\Authentication\\VerifyOtpRequestDTO.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\VerifyOtpRequestDTO.cs",
-              "RelativeToolTip": "CapStone\\DTO\\Authentication\\VerifyOtpRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T14:00:44.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ClaimHistoryResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\ClaimHistory\\ClaimHistoryResponseDTO.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\ClaimHistory\\ClaimHistoryResponseDTO.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\ClaimHistory\\ClaimHistoryResponseDTO.cs",
-              "RelativeToolTip": "CapStone\\DTO\\ClaimHistory\\ClaimHistoryResponseDTO.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T03:30:15.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "InsuranceProductService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\InsuranceProductService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\InsuranceProductService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\InsuranceProductService.cs",
-              "RelativeToolTip": "CapStone\\Services\\InsuranceProductService.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAwwCwBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T03:47:59.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "InsuranceProductResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\InsuranceProduct\\InsuranceProductResponseDTO.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\InsuranceProduct\\InsuranceProductResponseDTO.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\InsuranceProduct\\InsuranceProductResponseDTO.cs",
-              "RelativeToolTip": "CapStone\\DTO\\InsuranceProduct\\InsuranceProductResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T03:49:53.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ClaimDocumentService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\ClaimDocumentService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\ClaimDocumentService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\ClaimDocumentService.cs",
-              "RelativeToolTip": "CapStone\\Services\\ClaimDocumentService.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAswIQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T03:36:43.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Program.cs",
-              "RelativeDocumentMoniker": "CapStone\\Program.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Program.cs",
-              "RelativeToolTip": "CapStone\\Program.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAAAFAAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T05:34:29.897Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CustomerResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Customer\\CustomerResponseDTO.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\Customer\\CustomerResponseDTO.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Customer\\CustomerResponseDTO.cs",
-              "RelativeToolTip": "CapStone\\DTO\\Customer\\CustomerResponseDTO.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:16:39.913Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\IAuthService.cs",
-              "RelativeDocumentMoniker": "CapStone\\Services\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\IAuthService.cs",
-              "RelativeToolTip": "CapStone\\Services\\IAuthService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwA4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T13:59:44.807Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ResendOtpRequestDTO.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\ResendOtpRequestDTO.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\Authentication\\ResendOtpRequestDTO.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\ResendOtpRequestDTO.cs",
-              "RelativeToolTip": "CapStone\\DTO\\Authentication\\ResendOtpRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T17:18:24.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "LoginResponse.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\LoginResponse.cs",
-              "RelativeDocumentMoniker": "CapStone\\DTO\\Authentication\\LoginResponse.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\LoginResponse.cs",
-              "RelativeToolTip": "CapStone\\DTO\\Authentication\\LoginResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T17:32:43.39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "20261027172251_AddEmailOtpLastSentAt.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Migrations\\20261027172251_AddEmailOtpLastSentAt.cs",
-              "RelativeDocumentMoniker": "CapStone\\Migrations\\20261027172251_AddEmailOtpLastSentAt.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Migrations\\20261027172251_AddEmailOtpLastSentAt.cs",
-              "RelativeToolTip": "CapStone\\Migrations\\20261027172251_AddEmailOtpLastSentAt.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T17:22:51.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "CapStone\\Controllers\\AuthController.cs",
@@ -527,23 +308,350 @@
               "RelativeToolTip": "CapStone\\Controllers\\AuthController.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAQwEMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T15:26:09.713Z"
+              "WhenOpened": "2026-10-27T15:26:09.713Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Program.cs",
+              "RelativeDocumentMoniker": "CapStone\\Program.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Program.cs",
+              "RelativeToolTip": "CapStone\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T05:34:29.897Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InsuranceProductService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\InsuranceProductService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\InsuranceProductService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\InsuranceProductService.cs",
+              "RelativeToolTip": "CapStone\\Services\\InsuranceProductService.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAwwCwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T03:47:59.832Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "CapStone\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "CapStone\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wCEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T05:23:03.962Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PolicyPlanService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PolicyPlanService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\PolicyPlanService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\PolicyPlanService.cs",
+              "RelativeToolTip": "CapStone\\Services\\PolicyPlanService.cs",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAmwBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T06:26:13.535Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "CapStone\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\Customer.cs",
+              "RelativeToolTip": "CapStone\\Models\\Customer.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T05:10:11.362Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\CustomerService.cs",
+              "RelativeToolTip": "CapStone\\Services\\CustomerService.cs",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAlwMYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T10:22:18.081Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\AuthService.cs",
+              "RelativeToolTip": "CapStone\\Services\\AuthService.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAQwDMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T05:20:14.205Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ClaimHistory.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\ClaimHistory.cs",
+              "RelativeDocumentMoniker": "CapStone\\Models\\ClaimHistory.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\ClaimHistory.cs",
+              "RelativeToolTip": "CapStone\\Models\\ClaimHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T03:32:11.384Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\User.cs",
+              "RelativeDocumentMoniker": "CapStone\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Models\\User.cs",
+              "RelativeToolTip": "CapStone\\Models\\User.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wCYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T05:21:20.926Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\IEmailService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\IEmailService.cs",
+              "RelativeToolTip": "CapStone\\Services\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T14:02:51.826Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CapStone\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CapStone\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAswC0AAAAAAAAAAAAAAA==",
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\EmailService.cs",
+              "RelativeToolTip": "CapStone\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T15:12:05.277Z"
+              "WhenOpened": "2026-10-27T14:03:27.969Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 26,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\appsettings.json",
+              "RelativeDocumentMoniker": "CapStone\\appsettings.json",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\appsettings.json",
+              "RelativeToolTip": "CapStone\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-26T09:01:22.474Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PolicyPlanRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\PolicyPlan\\PolicyPlanRequestDTO.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\PolicyPlan\\PolicyPlanRequestDTO.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\PolicyPlan\\PolicyPlanRequestDTO.cs",
+              "RelativeToolTip": "CapStone\\DTO\\PolicyPlan\\PolicyPlanRequestDTO.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA3wBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T07:43:38.518Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PolicyPlanResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\PolicyPlan\\PolicyPlanResponseDTO.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\PolicyPlan\\PolicyPlanResponseDTO.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\PolicyPlan\\PolicyPlanResponseDTO.cs",
+              "RelativeToolTip": "CapStone\\DTO\\PolicyPlan\\PolicyPlanResponseDTO.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T07:42:12.034Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ClaimResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Claim\\ClaimResponseDTO.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\Claim\\ClaimResponseDTO.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Claim\\ClaimResponseDTO.cs",
+              "RelativeToolTip": "CapStone\\DTO\\Claim\\ClaimResponseDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T18:09:50.419Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ClaimService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\ClaimService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\ClaimService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\ClaimService.cs",
+              "RelativeToolTip": "CapStone\\Services\\ClaimService.cs",
+              "ViewState": "AgIAADYBAAAAAAAAAAAlwD8BAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T11:44:21.13Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ClaimDocumentResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\ClaimDocument\\ClaimDocumentResponseDTO.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\ClaimDocument\\ClaimDocumentResponseDTO.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\ClaimDocument\\ClaimDocumentResponseDTO.cs",
+              "RelativeToolTip": "CapStone\\DTO\\ClaimDocument\\ClaimDocumentResponseDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T03:30:03.011Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "VerifyOtpRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\VerifyOtpRequestDTO.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\Authentication\\VerifyOtpRequestDTO.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\VerifyOtpRequestDTO.cs",
+              "RelativeToolTip": "CapStone\\DTO\\Authentication\\VerifyOtpRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T14:00:44.122Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ClaimHistoryResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\ClaimHistory\\ClaimHistoryResponseDTO.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\ClaimHistory\\ClaimHistoryResponseDTO.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\ClaimHistory\\ClaimHistoryResponseDTO.cs",
+              "RelativeToolTip": "CapStone\\DTO\\ClaimHistory\\ClaimHistoryResponseDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T03:30:15.461Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "InsuranceProductResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\InsuranceProduct\\InsuranceProductResponseDTO.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\InsuranceProduct\\InsuranceProductResponseDTO.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\InsuranceProduct\\InsuranceProductResponseDTO.cs",
+              "RelativeToolTip": "CapStone\\DTO\\InsuranceProduct\\InsuranceProductResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T03:49:53.967Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ClaimDocumentService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\ClaimDocumentService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\ClaimDocumentService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\ClaimDocumentService.cs",
+              "RelativeToolTip": "CapStone\\Services\\ClaimDocumentService.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAswIQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T03:36:43.404Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CustomerResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Customer\\CustomerResponseDTO.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\Customer\\CustomerResponseDTO.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Customer\\CustomerResponseDTO.cs",
+              "RelativeToolTip": "CapStone\\DTO\\Customer\\CustomerResponseDTO.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T05:16:39.913Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "CapStone\\Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Services\\IAuthService.cs",
+              "RelativeToolTip": "CapStone\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T13:59:44.807Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ResendOtpRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\ResendOtpRequestDTO.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\Authentication\\ResendOtpRequestDTO.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\ResendOtpRequestDTO.cs",
+              "RelativeToolTip": "CapStone\\DTO\\Authentication\\ResendOtpRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T17:18:24.88Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "CapStone\\DTO\\Authentication\\LoginResponse.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Authentication\\LoginResponse.cs",
+              "RelativeToolTip": "CapStone\\DTO\\Authentication\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T17:32:43.39Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20261027172251_AddEmailOtpLastSentAt.cs",
+              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Migrations\\20261027172251_AddEmailOtpLastSentAt.cs",
+              "RelativeDocumentMoniker": "CapStone\\Migrations\\20261027172251_AddEmailOtpLastSentAt.cs",
+              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Migrations\\20261027172251_AddEmailOtpLastSentAt.cs",
+              "RelativeToolTip": "CapStone\\Migrations\\20261027172251_AddEmailOtpLastSentAt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T17:22:51.956Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
               "Title": "20261027152804_AddEmailOtpFields.cs",
               "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Migrations\\20261027152804_AddEmailOtpFields.cs",
               "RelativeDocumentMoniker": "CapStone\\Migrations\\20261027152804_AddEmailOtpFields.cs",
@@ -551,11 +659,12 @@
               "RelativeToolTip": "CapStone\\Migrations\\20261027152804_AddEmailOtpFields.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T15:28:04.486Z"
+              "WhenOpened": "2026-10-27T15:28:04.486Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "CapStone.http",
               "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\CapStone.http",
               "RelativeDocumentMoniker": "CapStone\\CapStone.http",
@@ -563,11 +672,12 @@
               "RelativeToolTip": "CapStone\\CapStone.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-10-26T11:29:08.402Z"
+              "WhenOpened": "2026-10-26T11:29:08.402Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "CustomerRequestDTO.cs",
               "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Customer\\CustomerRequestDTO.cs",
               "RelativeDocumentMoniker": "CapStone\\DTO\\Customer\\CustomerRequestDTO.cs",
@@ -575,11 +685,12 @@
               "RelativeToolTip": "CapStone\\DTO\\Customer\\CustomerRequestDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:16:25.332Z"
+              "WhenOpened": "2026-10-27T05:16:25.332Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "20261027073754_UpdateExistingEnum.cs",
               "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Migrations\\20261027073754_UpdateExistingEnum.cs",
               "RelativeDocumentMoniker": "CapStone\\Migrations\\20261027073754_UpdateExistingEnum.cs",
@@ -587,11 +698,12 @@
               "RelativeToolTip": "CapStone\\Migrations\\20261027073754_UpdateExistingEnum.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T07:38:17.045Z"
+              "WhenOpened": "2026-10-27T07:38:17.045Z",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "CustomerFilterDTO.cs",
               "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\DTO\\Customer\\CustomerFilterDTO.cs",
               "RelativeDocumentMoniker": "CapStone\\DTO\\Customer\\CustomerFilterDTO.cs",
@@ -599,31 +711,8 @@
               "RelativeToolTip": "CapStone\\DTO\\Customer\\CustomerFilterDTO.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAiwAwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T07:08:31.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "GlobalExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Middleware\\GlobalExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "CapStone\\Middleware\\GlobalExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Middleware\\GlobalExceptionMiddleware.cs",
-              "RelativeToolTip": "CapStone\\Middleware\\GlobalExceptionMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T05:23:03.962Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Repostories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "CapStone\\Repostories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\Repostories\\UserRepository.cs",
-              "RelativeToolTip": "CapStone\\Repostories\\UserRepository.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAADwv0EAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T15:20:38.01Z"
+              "WhenOpened": "2026-10-23T07:08:31.882Z",
+              "OwnerCaption": "%2"
             }
           ]
         }

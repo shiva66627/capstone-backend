@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shiva\\source\\repos\\CapStone\\Capstone\\CapStone.csproj": {}
+    "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\CapStone.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shiva\\source\\repos\\CapStone\\Capstone\\CapStone.csproj": {
+    "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\CapStone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shiva\\source\\repos\\CapStone\\Capstone\\CapStone.csproj",
+        "projectUniqueName": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\CapStone.csproj",
         "projectName": "CapStone",
-        "projectPath": "C:\\Users\\shiva\\source\\repos\\CapStone\\Capstone\\CapStone.csproj",
+        "projectPath": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\CapStone.csproj",
         "packagesPath": "C:\\Users\\shiva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shiva\\source\\repos\\CapStone\\Capstone\\obj\\",
+        "outputPath": "C:\\Users\\shiva\\source\\repos\\CapStone\\CapStone\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -115,7 +115,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100-rc.3.26522.148/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -2,10 +2,12 @@ using CapStone.DTO.Common;
 using CapStone.DTO.PremiumPayment;
 using CapStone.Exceptions;
 using CapStone.Models;
+using CapStone.Data;
 using CapStone.Repositories;
 using Microsoft.AspNetCore.Http;
-using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.Security.Claims;
 
 namespace CapStone.Services
 {
@@ -16,19 +18,22 @@ namespace CapStone.Services
         private readonly ICustomerRepository _customerRepository;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ILogger<PremiumPaymentService> _logger;
+        private readonly CapstoneDbContext _context;
 
         public PremiumPaymentService(
             IPremiumPaymentRepository paymentRepository,
             IPolicyRepository policyRepository,
             ICustomerRepository customerRepository,
             IHttpContextAccessor httpContextAccessor,
-            ILogger<PremiumPaymentService> logger)
+            ILogger<PremiumPaymentService> logger,
+            CapstoneDbContext context)
         {
             _paymentRepository = paymentRepository;
             _policyRepository = policyRepository;
             _customerRepository = customerRepository;
             _httpContextAccessor = httpContextAccessor;
             _logger = logger;
+            _context = context;
         }
 
         public async Task<ApiResponseDTO<IEnumerable<PremiumPaymentResponseDTO>>> GetAllPaymentsAsync()
@@ -219,6 +224,9 @@ namespace CapStone.Services
             }
         }
 
+
+
+
         public async Task<ApiResponseDTO<string>> MakePaymentAsync(PremiumPaymentRequestDTO request)
         {
             try
@@ -310,43 +318,119 @@ namespace CapStone.Services
                     return new ApiResponseDTO<string> { Success = false, Message = "Transaction Reference Number already exists." };
                 }
 
-                // Create payment
-                var payment = new PremiumPayment
+                //    // Create payment
+                //    var payment = new PremiumPayment
+                //    {
+                //        Amount = request.Amount,
+                //        PaymentMode = request.PaymentMode,
+                //        TransactionReferenceNo = request.TransactionReferenceNo,
+                //        PaymentStatus = PaymentStatus.Success,
+                //        PaymentDate = DateTime.UtcNow,
+                //        CreatedDate = DateTime.UtcNow,
+                //        PolicyId = request.PolicyId
+                //    };
+
+                //    await _paymentRepository.AddAsync(payment);
+
+                //    // Update policy paid amount
+                //    policy.PremiumPaid += request.Amount;
+                //    policy.UpdatedDate = DateTime.UtcNow;
+
+                //    // Activate policy after successful payment
+                //    if (policy.PolicyStatus == PolicyStatus.Pending)
+                //    {
+                //        policy.PolicyStatus = PolicyStatus.Active;
+                //    }
+
+                //    await _policyRepository.UpdateAsync(policy);
+
+                //    await _paymentRepository.SaveChangesAsync();
+                //    await _policyRepository.SaveChangesAsync();
+
+                //    policy.PremiumPayments ??= new List<PremiumPayment>();
+                //    policy.PremiumPayments.Add(payment);
+                //    var nextDueDate = PolicyService.CalculateNextPremiumDueDate(policy);
+                //    var nextDueMsg = nextDueDate.HasValue 
+                //        ? $" Next premium payment is due on {nextDueDate.Value:yyyy-MM-dd}." 
+                //        : " All premium payments for this policy term have been completed.";
+
+                //    _logger.LogInformation("LOG-008: Payment record creation successful. PolicyId: {PolicyId}, Amount: {Amount}, Ref: {Ref}", request.PolicyId, request.Amount, request.TransactionReferenceNo);
+
+                //    return new ApiResponseDTO<string>
+                //    {
+                //        Success = true,
+                //        Message = $"Payment recorded successfully.{nextDueMsg}",
+                //        Data = nextDueDate?.ToString("yyyy-MM-dd")
+                //    };
+                //}
+                //catch (Exception ex)
+                //{
+                //    // Handled in ApiResponseDTO
+                //    _logger.LogError(ex, "LOG-016: Unexpected system error during MakePayment.");
+                //    return new ApiResponseDTO<string>
+                //    {
+                //        Success = false,
+                //        Message = ex.Message
+                //    };
+                //}
+
+                using var transaction =
+                    await _context.Database.BeginTransactionAsync();
+
+                try
                 {
-                    Amount = request.Amount,
-                    PaymentMode = request.PaymentMode,
-                    TransactionReferenceNo = request.TransactionReferenceNo,
-                    PaymentStatus = PaymentStatus.Success,
-                    PaymentDate = DateTime.UtcNow,
-                    CreatedDate = DateTime.UtcNow,
-                    PolicyId = request.PolicyId
-                };
+                    // Create payment
+                    var payment = new PremiumPayment
+                    {
+                        Amount = request.Amount,
+                        PaymentMode = request.PaymentMode,
+                        TransactionReferenceNo = request.TransactionReferenceNo,
+                        PaymentStatus = PaymentStatus.Success,
+                        PaymentDate = DateTime.UtcNow,
+                        CreatedDate = DateTime.UtcNow,
+                        PolicyId = request.PolicyId
+                    };
 
-                await _paymentRepository.AddAsync(payment);
+                    await _paymentRepository.AddAsync(payment);
 
-                // Update policy paid amount
-                policy.PremiumPaid += request.Amount;
-                policy.UpdatedDate = DateTime.UtcNow;
+                    // Update policy paid amount
+                    policy.PremiumPaid += request.Amount;
+                    policy.UpdatedDate = DateTime.UtcNow;
 
-                // Activate policy after successful payment
-                if (policy.PolicyStatus == PolicyStatus.Pending)
+                    // Activate policy after successful payment
+                    if (policy.PolicyStatus == PolicyStatus.Pending)
+                    {
+                        policy.PolicyStatus = PolicyStatus.Active;
+                    }
+
+                    await _policyRepository.UpdateAsync(policy);
+
+                    // Save both changes
+                    await _context.SaveChangesAsync();
+
+                    // Commit transaction
+                    await transaction.CommitAsync();
+
+                    policy.PremiumPayments ??= new List<PremiumPayment>();
+                    policy.PremiumPayments.Add(payment);
+                }
+                catch
                 {
-                    policy.PolicyStatus = PolicyStatus.Active;
+                    // Rollback transaction
+                    await transaction.RollbackAsync();
+                    throw;
                 }
 
-                await _policyRepository.UpdateAsync(policy);
-
-                await _paymentRepository.SaveChangesAsync();
-                await _policyRepository.SaveChangesAsync();
-
-                policy.PremiumPayments ??= new List<PremiumPayment>();
-                policy.PremiumPayments.Add(payment);
+                // Calculate next due date
                 var nextDueDate = PolicyService.CalculateNextPremiumDueDate(policy);
-                var nextDueMsg = nextDueDate.HasValue 
-                    ? $" Next premium payment is due on {nextDueDate.Value:yyyy-MM-dd}." 
+
+                var nextDueMsg = nextDueDate.HasValue
+                    ? $" Next premium payment is due on {nextDueDate.Value:yyyy-MM-dd}."
                     : " All premium payments for this policy term have been completed.";
 
-                _logger.LogInformation("LOG-008: Payment record creation successful. PolicyId: {PolicyId}, Amount: {Amount}, Ref: {Ref}", request.PolicyId, request.Amount, request.TransactionReferenceNo);
+                _logger.LogInformation(
+                    "LOG-008: Payment record creation successful. PolicyId: {PolicyId}, Amount: {Amount}, Ref: {Ref}",
+                    request.PolicyId, request.Amount, request.TransactionReferenceNo);
 
                 return new ApiResponseDTO<string>
                 {
@@ -357,8 +441,10 @@ namespace CapStone.Services
             }
             catch (Exception ex)
             {
-                // Handled in ApiResponseDTO
-                _logger.LogError(ex, "LOG-016: Unexpected system error during MakePayment.");
+                _logger.LogError(
+                    ex,
+                    "LOG-016: Unexpected system error during MakePayment.");
+
                 return new ApiResponseDTO<string>
                 {
                     Success = false,

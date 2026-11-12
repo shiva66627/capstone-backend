@@ -192,14 +192,22 @@ namespace CapStone.Services
                 if (user == null)
                 {
                     _logger.LogWarning("LOG-003: Login failure for email: {Email}. Reason: User not found.", request.Email);
-                    throw new InvalidCredentialsException("Invalid email or password.");
+                    return new ApiResponseDTO<LoginResponseDTO>
+                    {
+                        Success = false,
+                        Message = "Invalid email or password."
+                    };
                 }
 
                 // Check user status
                 if (user.ActiveStatus != ActiveStatusEnum.Active)
                 {
                     _logger.LogWarning("LOG-014: Security failure. Inactive user attempted login: {Email}", request.Email);
-                    throw new InactiveUserException("Your account is inactive.");
+                    return new ApiResponseDTO<LoginResponseDTO>
+                    {
+                        Success = false,
+                        Message = "Your account is inactive. Please contact support."
+                    };
                 }
                 if (!user.IsEmailVerified)
                 {
@@ -218,7 +226,11 @@ namespace CapStone.Services
                 if (!passwordMatched)
                 {
                     _logger.LogWarning("LOG-003: Login failure for email: {Email}. Reason: Password mismatch.", request.Email);
-                    throw new InvalidCredentialsException("Invalid email or password.");
+                    return new ApiResponseDTO<LoginResponseDTO>
+                    {
+                        Success = false,
+                        Message = "Invalid email or password."
+                    };
                 }
 
                 // Generate JWT

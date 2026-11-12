@@ -63,10 +63,20 @@ namespace CapStone.Repositories
             await _context.SaveChangesAsync();
         }
 
+        //public async Task<User?> GetByEmailAsync(string email)
+        //{
+        //    return await _context.Users
+        //        .FirstOrDefaultAsync(u => u.Email == email);
+        //}
+        // using stored procedues..
         public async Task<User?> GetByEmailAsync(string email)
         {
-            return await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == email);
+            var users = await _context.Users
+                .FromSqlInterpolated($"EXEC GetUserByEmail @Email={email}")
+                .AsNoTracking()
+                .ToListAsync();
+
+            return users.FirstOrDefault();
         }
 
         public async Task<User?> GetByMobileNumberAsync(string mobileNumber)
